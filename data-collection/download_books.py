@@ -1226,6 +1226,9 @@ def download_book(book_id, title, author, output_dir="books", max_retries=3):
                 return True
             elif response.status_code == 403:
                 print(f"✗ 403 Forbidden for {title} - Server blocking requests")
+                print(f"📋 Response Headers:")
+                for header, value in response.headers.items():
+                    print(f"   {header}: {value}")
                 print(f"⚠ Skipping this book and continuing...")
                 return "403"
             else:
