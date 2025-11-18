@@ -9,6 +9,8 @@ function App() {
   const [currentQuote, setCurrentQuote] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [lastQuoteChangeTime, setLastQuoteChangeTime] = useState(null)
+  const [currentTimeKey, setCurrentTimeKey] = useState(null)
 
   // 시간 데이터 로드
   useEffect(() => {
@@ -93,8 +95,21 @@ function App() {
     const minutes = currentTime.getMinutes()
     const timeKey = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`
 
-    const result = findClosestQuote(timeKey)
-    setCurrentQuote(result)
+    const now = Date.now()
+    const timeSinceLastChange = lastQuoteChangeTime ? now - lastQuoteChangeTime : Infinity
+
+    // 분이 바뀌었거나, 마지막 변경으로부터 10초 이상 경과했을 때만 quote 변경
+    const shouldChangeQuote =
+      timeKey !== currentTimeKey || // 분이 바뀜
+      timeSinceLastChange >= 10000 || // 10초 경과
+      !currentQuote // 첫 로드
+
+    if (shouldChangeQuote) {
+      const result = findClosestQuote(timeKey)
+      setCurrentQuote(result)
+      setLastQuoteChangeTime(now)
+      setCurrentTimeKey(timeKey)
+    }
   }, [currentTime, timesData])
 
   return (
