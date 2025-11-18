@@ -49,6 +49,13 @@
   opacity: 0.7;
 }
 
+.quote-time-note {
+  font-size: 0.85rem;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
 .no-quote .quote-text {
   font-style: normal;
   opacity: 0.6;

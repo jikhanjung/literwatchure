@@ -38,6 +38,53 @@ function App() {
     return () => clearInterval(timer)
   }, [])
 
+  // 시간을 분 단위로 변환 (00:00 = 0, 23:59 = 1439)
+  const timeToMinutes = (hours, minutes) => hours * 60 + minutes
+
+  // 두 시간 사이의 최소 거리 계산 (원형으로)
+  const getMinuteDistance = (time1, time2) => {
+    const diff = Math.abs(time1 - time2)
+    return Math.min(diff, 1440 - diff) // 1440분 = 24시간
+  }
+
+  // 가장 가까운 시간의 quote 찾기
+  const findClosestQuote = (targetTimeKey) => {
+    const availableTimes = Object.keys(timesData)
+    if (availableTimes.length === 0) return null
+
+    // 현재 시간에 정확히 매칭되는 quote가 있으면 반환
+    if (timesData[targetTimeKey] && timesData[targetTimeKey].length > 0) {
+      const randomQuote = timesData[targetTimeKey][Math.floor(Math.random() * timesData[targetTimeKey].length)]
+      return { quote: randomQuote, exactMatch: true }
+    }
+
+    // 목표 시간을 분으로 변환
+    const [targetHours, targetMinutes] = targetTimeKey.split(':').map(Number)
+    const targetInMinutes = timeToMinutes(targetHours, targetMinutes)
+
+    // 가장 가까운 시간 찾기
+    let closestTime = null
+    let minDistance = Infinity
+
+    availableTimes.forEach(timeKey => {
+      const [hours, minutes] = timeKey.split(':').map(Number)
+      const timeInMinutes = timeToMinutes(hours, minutes)
+      const distance = getMinuteDistance(targetInMinutes, timeInMinutes)
+
+      if (distance < minDistance) {
+        minDistance = distance
+        closestTime = timeKey
+      }
+    })
+
+    if (closestTime && timesData[closestTime].length > 0) {
+      const randomQuote = timesData[closestTime][Math.floor(Math.random() * timesData[closestTime].length)]
+      return { quote: randomQuote, exactMatch: false, closestTime }
+    }
+
+    return null
+  }
+
   // 현재 시각에 맞는 quote 선택
   useEffect(() => {
     if (!timesData) return
@@ -46,14 +93,8 @@ function App() {
     const minutes = currentTime.getMinutes()
     const timeKey = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`
 
-    const quotes = timesData[timeKey]
-    if (quotes && quotes.length > 0) {
-      // 랜덤하게 하나 선택
-      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
-      setCurrentQuote(randomQuote)
-    } else {
-      setCurrentQuote(null)
-    }
+    const result = findClosestQuote(timeKey)
+    setCurrentQuote(result)
   }, [currentTime, timesData])
 
   return (

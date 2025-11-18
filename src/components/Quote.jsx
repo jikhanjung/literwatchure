@@ -1,7 +1,7 @@
 import './Quote.css'
 
-function Quote({ quote }) {
-  if (!quote) {
+function Quote({ quote: quoteData }) {
+  if (!quoteData) {
     return (
       <div className="quote no-quote">
         <p className="quote-text">
@@ -14,6 +14,8 @@ function Quote({ quote }) {
     )
   }
 
+  const { quote, exactMatch, closestTime } = quoteData
+
   return (
     <div className="quote">
       <div className="quote-mark opening">&ldquo;</div>
@@ -23,6 +25,11 @@ function Quote({ quote }) {
       <div className="quote-attribution">
         <p className="quote-title">{quote.title}</p>
         <p className="quote-author">by {quote.author}</p>
+        {!exactMatch && closestTime && (
+          <p className="quote-time-note">
+            (가장 가까운 시각: {closestTime})
+          </p>
+        )}
       </div>
     </div>
   )
