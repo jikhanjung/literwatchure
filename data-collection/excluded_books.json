@@ -50,6 +50,11 @@
       "title": "Moralia",
       "reason": "religious_text",
       "note": "킹제임스 성경으로 잘못 분류됨 (chapter:verse 형식)"
+    },
+    {
+      "title": "Agrarian Justice",
+      "reason": "religious_text",
+      "note": "Douay-Rheims Bible로 잘못 분류됨 (chapter:verse 형식)"
     }
   ],
   "patterns": [
