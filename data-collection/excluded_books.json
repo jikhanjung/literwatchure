@@ -30,6 +30,11 @@
       "title": "Zen and the Art of the Internet",
       "reason": "technical_manual",
       "note": "인터넷 가이드북"
+    },
+    {
+      "title": "The Pilgrim's Progress from this world to that which is to come: Delivered under the similitude of a dream, by John Bunyan",
+      "reason": "religious_text",
+      "note": "기독교 우화"
     }
   ],
   "patterns": [
