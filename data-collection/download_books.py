@@ -6,6 +6,7 @@
 import os
 import requests
 from time import sleep
+import random
 
 # 프로젝트 구텐베르크의 인기 문학 작품 ID와 메타데이터
 BOOKS = [
@@ -1140,7 +1141,7 @@ BOOKS = [
     {"id": 99400, "title": "The Grace of Christ", "author": "Saint Augustine"},
 ]
 
-def download_book(book_id, title, author, output_dir="books"):
+def download_book(book_id, title, author, output_dir="books", max_retries=3):
     """프로젝트 구텐베르크에서 책을 다운로드합니다."""
     os.makedirs(output_dir, exist_ok=True)
 
@@ -1157,26 +1158,56 @@ def download_book(book_id, title, author, output_dir="books"):
         print(f"✓ Already downloaded: {title} by {author}")
         return True
 
-    try:
-        print(f"Downloading: {title} by {author}...")
-        response = requests.get(url, timeout=30)
+    # User-Agent 헤더 추가 (봇으로 인식되지 않도록)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
 
-        # 첫 번째 URL이 실패하면 대체 URL 시도
-        if response.status_code != 200:
-            response = requests.get(alt_url, timeout=30)
+    for attempt in range(max_retries):
+        try:
+            if attempt > 0:
+                wait_time = 10 * attempt  # 재시도 시 대기 시간 증가
+                print(f"  Retry {attempt}/{max_retries-1} for {title} (waiting {wait_time}s)...")
+                sleep(wait_time)
 
-        if response.status_code == 200:
-            with open(filename, 'w', encoding='utf-8') as f:
-                f.write(response.text)
-            print(f"✓ Downloaded: {title}")
-            return True
-        else:
-            print(f"✗ Failed to download {title} (Status: {response.status_code})")
+            print(f"Downloading: {title} by {author}...")
+            response = requests.get(url, headers=headers, timeout=30)
+
+            # 첫 번째 URL이 실패하면 대체 URL 시도
+            if response.status_code != 200:
+                sleep(2)  # 대체 URL 시도 전 잠시 대기
+                response = requests.get(alt_url, headers=headers, timeout=30)
+
+            if response.status_code == 200:
+                with open(filename, 'w', encoding='utf-8') as f:
+                    f.write(response.text)
+                print(f"✓ Downloaded: {title}")
+                return True
+            elif response.status_code == 403:
+                print(f"⚠ 403 Forbidden for {title} - Server blocking requests")
+                if attempt < max_retries - 1:
+                    continue
+                else:
+                    print(f"✗ Failed after {max_retries} attempts")
+                    return False
+            else:
+                print(f"✗ Failed to download {title} (Status: {response.status_code})")
+                return False
+
+        except requests.exceptions.Timeout:
+            print(f"⚠ Timeout for {title}")
+            if attempt < max_retries - 1:
+                sleep(5)
+                continue
+            return False
+        except Exception as e:
+            print(f"✗ Error downloading {title}: {str(e)}")
+            if attempt < max_retries - 1:
+                sleep(3)
+                continue
             return False
 
-    except Exception as e:
-        print(f"✗ Error downloading {title}: {str(e)}")
-        return False
+    return False
 
 def main():
     """모든 책을 다운로드합니다."""
@@ -1189,10 +1220,17 @@ def main():
     total_count = len(BOOKS)
 
     for book in BOOKS:
+        filename = os.path.join("books", f"{book['id']}.txt")
+        already_exists = os.path.exists(filename)
+
         if download_book(book["id"], book["title"], book["author"]):
             success_count += 1
-        # 서버에 부담을 주지 않기 위해 잠시 대기
-        sleep(1)
+
+        # 실제로 다운로드를 시도한 경우에만 대기
+        if not already_exists:
+            delay = random.uniform(3, 5)
+            print(f"  다음 다운로드까지 {delay:.1f}초 대기 중...")
+            sleep(delay)
 
     print()
     print("=" * 60)
