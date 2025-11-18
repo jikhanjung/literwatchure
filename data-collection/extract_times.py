@@ -14,7 +14,16 @@ WORD_TO_NUM = {
     'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 'eleven': 11, 'twelve': 12,
     'thirteen': 13, 'fourteen': 14, 'fifteen': 15, 'sixteen': 16,
     'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 'twenty': 20,
-    'thirty': 30, 'forty': 40, 'fifty': 50
+    'twenty-one': 21, 'twenty-two': 22, 'twenty-three': 23, 'twenty-four': 24,
+    'twenty-five': 25, 'twenty-six': 26, 'twenty-seven': 27, 'twenty-eight': 28,
+    'twenty-nine': 29, 'thirty': 30, 'thirty-one': 31, 'thirty-two': 32,
+    'thirty-three': 33, 'thirty-four': 34, 'thirty-five': 35, 'thirty-six': 36,
+    'thirty-seven': 37, 'thirty-eight': 38, 'thirty-nine': 39, 'forty': 40,
+    'forty-one': 41, 'forty-two': 42, 'forty-three': 43, 'forty-four': 44,
+    'forty-five': 45, 'forty-six': 46, 'forty-seven': 47, 'forty-eight': 48,
+    'forty-nine': 49, 'fifty': 50, 'fifty-one': 51, 'fifty-two': 52,
+    'fifty-three': 53, 'fifty-four': 54, 'fifty-five': 55, 'fifty-six': 56,
+    'fifty-seven': 57, 'fifty-eight': 58, 'fifty-nine': 59
 }
 
 def parse_time_to_24h(hour, minute, meridiem=None):
@@ -60,7 +69,7 @@ def extract_time_patterns(text, title, author):
 
         # 패턴 2: "three o'clock" 형식
         pattern2 = re.finditer(
-            r'\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\s+o[\'']?\s*clock\b',
+            r"\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\s+o'?\s*clock\b",
             sentence,
             re.IGNORECASE
         )
@@ -131,6 +140,137 @@ def extract_time_patterns(text, title, author):
                 "title": title,
                 "author": author
             })
+
+        # 패턴 7: "twenty minutes past three" - X minutes past Y
+        pattern7 = re.finditer(
+            r'\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-one|twenty-two|twenty-three|twenty-four|twenty-five|twenty-six|twenty-seven|twenty-eight|twenty-nine|thirty|thirty-one|thirty-two|thirty-three|thirty-four|thirty-five|thirty-six|thirty-seven|thirty-eight|thirty-nine|forty|forty-one|forty-two|forty-three|forty-four|forty-five|forty-six|forty-seven|forty-eight|forty-nine|fifty|fifty-one|fifty-two|fifty-three|fifty-four|fifty-five|fifty-six|fifty-seven|fifty-eight|fifty-nine)\s+minutes?\s+past\s+(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b',
+            sentence,
+            re.IGNORECASE
+        )
+        for match in pattern7:
+            minute_word = match.group(1).lower()
+            hour_word = match.group(2).lower()
+            minute = WORD_TO_NUM.get(minute_word, 0)
+            hour = WORD_TO_NUM.get(hour_word, 0)
+
+            if 1 <= hour <= 12 and 0 <= minute <= 59:
+                time_key = f"{hour:02d}:{minute:02d}"
+                results[time_key].append({
+                    "quote": sentence.strip(),
+                    "title": title,
+                    "author": author
+                })
+
+        # 패턴 8: "X minutes to Y" - Y시 X분 전
+        pattern8 = re.finditer(
+            r'\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-one|twenty-two|twenty-three|twenty-four|twenty-five|twenty-six|twenty-seven|twenty-eight|twenty-nine|thirty|thirty-one|thirty-two|thirty-three|thirty-four|thirty-five|thirty-six|thirty-seven|thirty-eight|thirty-nine|forty|forty-one|forty-two|forty-three|forty-four|forty-five|forty-six|forty-seven|forty-eight|forty-nine|fifty|fifty-one|fifty-two|fifty-three|fifty-four|fifty-five|fifty-six|fifty-seven|fifty-eight|fifty-nine)\s+minutes?\s+to\s+(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b',
+            sentence,
+            re.IGNORECASE
+        )
+        for match in pattern8:
+            minute_word = match.group(1).lower()
+            hour_word = match.group(2).lower()
+            minute_before = WORD_TO_NUM.get(minute_word, 0)
+            hour = WORD_TO_NUM.get(hour_word, 0)
+
+            if 1 <= hour <= 12 and 1 <= minute_before <= 59:
+                # X분 전 = 60 - X분
+                minute = 60 - minute_before
+                hour = hour - 1
+                if hour < 1:
+                    hour = 12
+                time_key = f"{hour:02d}:{minute:02d}"
+                results[time_key].append({
+                    "quote": sentence.strip(),
+                    "title": title,
+                    "author": author
+                })
+
+        # 패턴 9: "five past nine" - X past Y (minutes 생략)
+        pattern9 = re.finditer(
+            r'\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-five|thirty|thirty-five|forty|forty-five|fifty|fifty-five)\s+past\s+(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b',
+            sentence,
+            re.IGNORECASE
+        )
+        for match in pattern9:
+            minute_word = match.group(1).lower()
+            hour_word = match.group(2).lower()
+            minute = WORD_TO_NUM.get(minute_word, 0)
+            hour = WORD_TO_NUM.get(hour_word, 0)
+
+            if 1 <= hour <= 12 and 0 < minute <= 59:
+                time_key = f"{hour:02d}:{minute:02d}"
+                results[time_key].append({
+                    "quote": sentence.strip(),
+                    "title": title,
+                    "author": author
+                })
+
+        # 패턴 10: "twenty to eight" - X to Y (minutes 생략)
+        pattern10 = re.finditer(
+            r'\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-five|thirty|thirty-five|forty|forty-five|fifty|fifty-five)\s+to\s+(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b',
+            sentence,
+            re.IGNORECASE
+        )
+        for match in pattern10:
+            minute_word = match.group(1).lower()
+            hour_word = match.group(2).lower()
+            minute_before = WORD_TO_NUM.get(minute_word, 0)
+            hour = WORD_TO_NUM.get(hour_word, 0)
+
+            if 1 <= hour <= 12 and 1 <= minute_before <= 59:
+                minute = 60 - minute_before
+                hour = hour - 1
+                if hour < 1:
+                    hour = 12
+                time_key = f"{hour:02d}:{minute:02d}"
+                results[time_key].append({
+                    "quote": sentence.strip(),
+                    "title": title,
+                    "author": author
+                })
+
+        # 패턴 11: "3 twenty", "four thirty" - 시간 + 분 (단어 조합)
+        pattern11 = re.finditer(
+            r'\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\s+(oh-)?(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|twenty-one|twenty-two|twenty-three|twenty-four|twenty-five|twenty-six|twenty-seven|twenty-eight|twenty-nine|thirty|thirty-one|thirty-two|thirty-three|thirty-four|thirty-five|thirty-six|thirty-seven|thirty-eight|thirty-nine|forty|forty-one|forty-two|forty-three|forty-four|forty-five|forty-six|forty-seven|forty-eight|forty-nine|fifty|fifty-one|fifty-two|fifty-three|fifty-four|fifty-five|fifty-six|fifty-seven|fifty-eight|fifty-nine)\b',
+            sentence,
+            re.IGNORECASE
+        )
+        for match in pattern11:
+            hour_word = match.group(1).lower()
+            minute_word = match.group(3).lower()
+            hour = WORD_TO_NUM.get(hour_word, 0)
+            minute = WORD_TO_NUM.get(minute_word, 0)
+
+            if 1 <= hour <= 12 and 0 <= minute <= 59:
+                time_key = f"{hour:02d}:{minute:02d}"
+                results[time_key].append({
+                    "quote": sentence.strip(),
+                    "title": title,
+                    "author": author
+                })
+
+        # 패턴 12: 숫자로 된 "3 20", "4 30" 형식 (추가 검증 포함)
+        pattern12 = re.finditer(
+            r'\b(\d{1,2})\s+(\d{2})\b',
+            sentence,
+            re.IGNORECASE
+        )
+        for match in pattern12:
+            hour = int(match.group(1))
+            minute = int(match.group(2))
+
+            # 시간 범위 체크: 문맥상 시간일 가능성이 높은 경우만
+            if 1 <= hour <= 12 and 0 <= minute <= 59:
+                # 주변 문맥에 시간 관련 단어가 있는지 확인
+                context = sentence[max(0, match.start()-20):min(len(sentence), match.end()+20)]
+                if re.search(r'\b(at|clock|time|hour|morning|afternoon|evening|night|am|pm|a\.m\.|p\.m\.)\b', context, re.IGNORECASE):
+                    time_key = f"{hour:02d}:{minute:02d}"
+                    results[time_key].append({
+                        "quote": sentence.strip(),
+                        "title": title,
+                        "author": author
+                    })
 
     return results
 

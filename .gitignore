@@ -32,8 +32,8 @@ __pycache__/
 venv/
 env/
 ENV/
-data-collection/books/
-data-collection/books_metadata.json
+# data-collection/books/  # 주석 처리 - 다운로드한 책들을 git에 포함
+# data-collection/books_metadata.json  # 주석 처리 - 메타데이터를 git에 포함
 
 # Data (keep sample, ignore generated)
 # public/times.json
