@@ -4,6 +4,7 @@
 """
 
 import os
+import sys
 import requests
 from time import sleep
 import random
@@ -1218,12 +1219,9 @@ def download_book(book_id, title, author, output_dir="books", max_retries=3):
                 print(f"✓ Downloaded: {title}")
                 return True
             elif response.status_code == 403:
-                print(f"⚠ 403 Forbidden for {title} - Server blocking requests")
-                if attempt < max_retries - 1:
-                    continue
-                else:
-                    print(f"✗ Failed after {max_retries} attempts")
-                    return False
+                print(f"✗ 403 Forbidden for {title} - Server blocking requests")
+                print(f"⚠ Terminating download process due to 403 error")
+                sys.exit(1)
             else:
                 print(f"✗ Failed to download {title} (Status: {response.status_code})")
                 return False
