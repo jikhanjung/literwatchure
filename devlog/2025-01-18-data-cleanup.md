@@ -35,6 +35,11 @@
 - **실제 내용**: "Schetsen uit de Dierenwereld" (동물 관련 네덜란드어 책)
 - **제거된 인용구**: 0개 (이미 추출 실패)
 
+### 6. William Morris의 The Water of the Wondrous Isles (ID: 38500)
+- **증상**: "John 18:17" 같은 성경 참조, "1824-\n\n_West, Plate 140,_" 같은 미술 캡션
+- **실제 내용**: "The Great Painters' Gospel" - 예수의 생애를 그린 성화들의 캡션 설명서
+- **제거된 인용구**: 172개
+
 ## 제거 작업 상세
 
 ### 작업 순서
@@ -56,6 +61,10 @@
    - The Time Machine (ID 56000): 0개
    - books_metadata.json 업데이트 (993권 → 990권)
    - 커버리지: 75.8% → 39.2%
+
+4. **종교 미술 책 제거** (커밋: 660b392)
+   - The Water of the Wondrous Isles (ID 38500): 172개
+   - books_metadata.json 업데이트 (990권 → 989권)
 
 ### 기술적 구현
 
@@ -81,9 +90,9 @@ times_data = {k: v for k, v in times_data.items() if v}
 |-----|--------|--------|------|
 | 커버리지 | 17.6% | 39.2% | +21.6%p (품질 개선) |
 | 커버된 시간대 | 253개 | 564개 | +311개 |
-| 총 인용구 수 | 6,382개 | 16,416개 | +10,034개 |
-| 제거된 성경 인용구 | - | 33,324개 | - |
-| 책 메타데이터 | 995권 | 990권 | -5권 |
+| 총 인용구 수 | 6,382개 | 16,244개 | +9,862개 |
+| 제거된 종교 텍스트 | - | 33,496개 | - |
+| 책 메타데이터 | 995권 | 989권 | -6권 |
 
 ### 데이터 품질
 
@@ -123,6 +132,7 @@ times_data = {k: v for k, v in times_data.items() if v}
 ## 관련 커밋
 
 ```
+660b392 Remove The Water of the Wondrous Isles (religious art book)
 2ae9414 Remove additional misclassified books (religious texts and wrong language)
 920fc49 Update coverage statistics after removing biblical texts
 ddb7b9a Remove Agrarian Justice (misclassified Douay-Rheims Bible)
@@ -131,9 +141,9 @@ fe09f41 Remove Moralia (misclassified King James Bible)
 
 ## 파일 변경 이력
 
-- `public/times.json`: 33,324개 인용구 제거
-- `data-collection/books_metadata.json`: 5개 책 제거 (995 → 990)
-- `data-collection/excluded_books.json`: 5개 항목 추가
+- `public/times.json`: 33,496개 인용구 제거
+- `data-collection/books_metadata.json`: 6개 책 제거 (995 → 989)
+- `data-collection/excluded_books.json`: 6개 항목 추가
 - `data-collection/covered_times.txt`: 통계 업데이트
 - `data-collection/missing_times.txt`: 통계 업데이트
 
