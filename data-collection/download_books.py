@@ -170,7 +170,6 @@ BOOKS = [
 
     # Virginia Woolf
     {"id": 5670, "title": "Mrs Dalloway", "author": "Virginia Woolf"},
-    {"id": 2188, "title": "To the Lighthouse", "author": "Virginia Woolf"},
 
     # D.H. Lawrence
     {"id": 4240, "title": "Women in Love", "author": "D.H. Lawrence"},
@@ -1177,7 +1176,14 @@ def is_book_excluded(title, excluded_titles, excluded_patterns):
     return False
 
 def download_book(book_id, title, author, output_dir="books", max_retries=3):
-    """프로젝트 구텐베르크에서 책을 다운로드합니다."""
+    """
+    프로젝트 구텐베르크에서 책을 다운로드합니다.
+
+    Returns:
+        True: 성공적으로 다운로드됨
+        False: 일반적인 실패
+        "403": 403 Forbidden 에러 발생
+    """
     os.makedirs(output_dir, exist_ok=True)
 
     # 텍스트 파일 URL (UTF-8)
@@ -1220,8 +1226,8 @@ def download_book(book_id, title, author, output_dir="books", max_retries=3):
                 return True
             elif response.status_code == 403:
                 print(f"✗ 403 Forbidden for {title} - Server blocking requests")
-                print(f"⚠ Terminating download process due to 403 error")
-                sys.exit(1)
+                print(f"⚠ Skipping this book and continuing...")
+                return "403"
             else:
                 print(f"✗ Failed to download {title} (Status: {response.status_code})")
                 return False
@@ -1270,13 +1276,29 @@ def main():
 
     success_count = 0
     total_count = len(filtered_books)
+    consecutive_403_count = 0  # 연속 403 에러 카운터
 
     for book in filtered_books:
         filename = os.path.join("books", f"{book['id']}.txt")
         already_exists = os.path.exists(filename)
 
-        if download_book(book["id"], book["title"], book["author"]):
+        result = download_book(book["id"], book["title"], book["author"])
+
+        if result == "403":
+            consecutive_403_count += 1
+            print(f"⚠ Consecutive 403 errors: {consecutive_403_count}/3")
+
+            if consecutive_403_count >= 10:
+                print()
+                print("=" * 60)
+                print("⛔ 연속 10회 403 에러 발생으로 스크립트를 종료합니다.")
+                print("=" * 60)
+                break
+        elif result == True:
             success_count += 1
+            consecutive_403_count = 0  # 성공 시 카운터 리셋
+        else:
+            consecutive_403_count = 0  # 일반 실패 시에도 카운터 리셋
 
         # 실제로 다운로드를 시도한 경우에만 대기
         if not already_exists:
