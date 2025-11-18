@@ -50,6 +50,11 @@
 - **실제 내용**: "Big Dummy's Guide To The Internet" - 1993-1994년 인터넷 가이드북 (EFF)
 - **제거된 인용구**: 10개
 
+### 9. Edgar Rice Burroughs의 The Outlaw of Torn (ID: 75)
+- **증상**: "<etc., until you type CTRL-Z> Message sent 23:05:44 14-JUN-1993" 같은 1993년 이메일 메시지
+- **실제 내용**: "Email 101" by John Goodwin - 1993년 이메일 사용 가이드북
+- **제거된 인용구**: 3개
+
 ## 제거 작업 상세
 
 ### 작업 순서
@@ -84,6 +89,10 @@
    - The Peterkin Papers (ID 118): 10개
    - books_metadata.json 업데이트 (988권 → 987권)
 
+7. **이메일 가이드북 제거** (커밋: TBD)
+   - The Outlaw of Torn (ID 75): 3개
+   - books_metadata.json 업데이트 (987권 → 986권)
+
 ### 기술적 구현
 
 Python 스크립트를 사용하여 다음 작업 수행:
@@ -108,9 +117,9 @@ times_data = {k: v for k, v in times_data.items() if v}
 |-----|--------|--------|------|
 | 커버리지 | 17.6% | 39.2% | +21.6%p (품질 개선) |
 | 커버된 시간대 | 253개 | 564개 | +311개 |
-| 총 인용구 수 | 6,382개 | 16,193개 | +9,811개 |
-| 제거된 부적절 텍스트 | - | 33,547개 | - |
-| 책 메타데이터 | 995권 | 987권 | -8권 |
+| 총 인용구 수 | 6,382개 | 16,190개 | +9,808개 |
+| 제거된 부적절 텍스트 | - | 33,550개 | - |
+| 책 메타데이터 | 995권 | 986권 | -9권 |
 
 ### 데이터 품질
 
@@ -118,6 +127,7 @@ times_data = {k: v for k, v in times_data.items() if v}
 - 성경 및 종교 텍스트 완전 제거
 - chapter:verse 형식의 잘못된 인용구 제거
 - 외국어 문서 제거
+- 기술 매뉴얼 (인터넷/이메일 가이드북 3권) 제거
 - 문학 작품만으로 구성된 깨끗한 데이터셋 확보
 
 **트레이드오프**:
@@ -162,8 +172,8 @@ fe09f41 Remove Moralia (misclassified King James Bible)
 ## 파일 변경 이력
 
 - `public/times.json`: 33,547개 인용구 제거
-- `data-collection/books_metadata.json`: 8개 책 제거 (995 → 987)
-- `data-collection/excluded_books.json`: 8개 항목 추가
+- `data-collection/books_metadata.json`: 9개 책 제거 (995 → 986)
+- `data-collection/excluded_books.json`: 9개 항목 추가
 - `data-collection/covered_times.txt`: 통계 업데이트
 - `data-collection/missing_times.txt`: 통계 업데이트
 

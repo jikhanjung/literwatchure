@@ -36,4 +36,4 @@ def remove_book_from_times(book_title):
     return removed_count
 
 if __name__ == '__main__':
-    remove_book_from_times("LOC Workshop on Electronic Texts")
+    remove_book_from_times("Email 101")

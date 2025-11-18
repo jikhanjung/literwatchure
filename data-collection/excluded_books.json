@@ -80,6 +80,11 @@
       "title": "Pellucidar (ID 80)",
       "reason": "technical_manual",
       "note": "실제로는 'The Online World' - 1993년 인터넷/BBS 가이드북"
+    },
+    {
+      "title": "The Outlaw of Torn (ID 75)",
+      "reason": "technical_manual",
+      "note": "실제로는 \"Email 101\" by John Goodwin - 1993년 이메일 가이드북"
     }
   ],
   "patterns": [
