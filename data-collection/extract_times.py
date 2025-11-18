@@ -37,11 +37,28 @@ def parse_time_to_24h(hour, minute, meridiem=None):
 def extract_time_patterns(text, title, author):
     """텍스트에서 시간 패턴을 추출합니다."""
     results = defaultdict(list)
+    text_length = len(text)
 
-    # 문장 단위로 분리
-    sentences = re.split(r'[.!?]\s+', text)
+    # 문장 단위로 분리하면서 위치 정보도 함께 저장
+    sentences_with_positions = []
 
-    for sentence in sentences:
+    # finditer로 문장 구분자를 찾아 문장과 위치를 함께 저장
+    last_end = 0
+    for match in re.finditer(r'[.!?]\s+', text):
+        sentence = text[last_end:match.start()].strip()
+        if sentence:
+            position = (last_end / text_length * 100) if text_length > 0 else 0
+            sentences_with_positions.append((sentence, position))
+        last_end = match.end()
+
+    # 마지막 문장 추가
+    if last_end < len(text):
+        sentence = text[last_end:].strip()
+        if sentence:
+            position = (last_end / text_length * 100) if text_length > 0 else 0
+            sentences_with_positions.append((sentence, position))
+
+    for sentence, position in sentences_with_positions:
         # 너무 긴 문장은 스킵 (250자 제한)
         if len(sentence) > 250:
             continue
@@ -64,7 +81,8 @@ def extract_time_patterns(text, title, author):
                     results[time_key].append({
                         "quote": sentence.strip(),
                         "title": title,
-                        "author": author
+                        "author": author,
+                        "position": round(position, 1)
                     })
 
         # 패턴 2: "three o'clock" 형식
@@ -81,7 +99,8 @@ def extract_time_patterns(text, title, author):
                 results[time_key].append({
                     "quote": sentence.strip(),
                     "title": title,
-                    "author": author
+                    "author": author,
+                    "position": round(position, 1)
                 })
 
         # 패턴 3: "half past three", "quarter past four" 등
@@ -101,7 +120,8 @@ def extract_time_patterns(text, title, author):
                 results[time_key].append({
                     "quote": sentence.strip(),
                     "title": title,
-                    "author": author
+                    "author": author,
+                    "position": round(position, 1)
                 })
 
         # 패턴 4: "quarter to four" (4시 15분 전 = 3시 45분)
@@ -122,7 +142,8 @@ def extract_time_patterns(text, title, author):
                 results[time_key].append({
                     "quote": sentence.strip(),
                     "title": title,
-                    "author": author
+                    "author": author,
+                    "position": round(position, 1)
                 })
 
         # 패턴 5: "midnight" (00:00)
@@ -130,7 +151,8 @@ def extract_time_patterns(text, title, author):
             results["00:00"].append({
                 "quote": sentence.strip(),
                 "title": title,
-                "author": author
+                "author": author,
+                "position": round(position, 1)
             })
 
         # 패턴 6: "noon" (12:00)
@@ -138,7 +160,8 @@ def extract_time_patterns(text, title, author):
             results["12:00"].append({
                 "quote": sentence.strip(),
                 "title": title,
-                "author": author
+                "author": author,
+                "position": round(position, 1)
             })
 
         # 패턴 7: "twenty minutes past three" - X minutes past Y
@@ -158,7 +181,8 @@ def extract_time_patterns(text, title, author):
                 results[time_key].append({
                     "quote": sentence.strip(),
                     "title": title,
-                    "author": author
+                    "author": author,
+                    "position": round(position, 1)
                 })
 
         # 패턴 8: "X minutes to Y" - Y시 X분 전
@@ -183,7 +207,8 @@ def extract_time_patterns(text, title, author):
                 results[time_key].append({
                     "quote": sentence.strip(),
                     "title": title,
-                    "author": author
+                    "author": author,
+                    "position": round(position, 1)
                 })
 
         # 패턴 9: "five past nine" - X past Y (minutes 생략)
@@ -203,7 +228,8 @@ def extract_time_patterns(text, title, author):
                 results[time_key].append({
                     "quote": sentence.strip(),
                     "title": title,
-                    "author": author
+                    "author": author,
+                    "position": round(position, 1)
                 })
 
         # 패턴 10: "twenty to eight" - X to Y (minutes 생략)
@@ -227,7 +253,8 @@ def extract_time_patterns(text, title, author):
                 results[time_key].append({
                     "quote": sentence.strip(),
                     "title": title,
-                    "author": author
+                    "author": author,
+                    "position": round(position, 1)
                 })
 
         # 패턴 11: "3 twenty", "four thirty" - 시간 + 분 (단어 조합)
@@ -247,7 +274,8 @@ def extract_time_patterns(text, title, author):
                 results[time_key].append({
                     "quote": sentence.strip(),
                     "title": title,
-                    "author": author
+                    "author": author,
+                    "position": round(position, 1)
                 })
 
         # 패턴 12: 숫자로 된 "3 20", "4 30" 형식 (추가 검증 포함)
@@ -269,12 +297,13 @@ def extract_time_patterns(text, title, author):
                     results[time_key].append({
                         "quote": sentence.strip(),
                         "title": title,
-                        "author": author
+                        "author": author,
+                        "position": round(position, 1)
                     })
 
     return results
 
-def process_books(books_dir="books", metadata_file="books_metadata.json"):
+def process_books(books_dir="books", metadata_file="books_metadata.json", output_file="../public/times.json"):
     """모든 책을 처리하고 시간 문장을 추출합니다."""
     # 메타데이터 로드
     with open(metadata_file, 'r', encoding='utf-8') as f:
@@ -283,8 +312,21 @@ def process_books(books_dir="books", metadata_file="books_metadata.json"):
     # 메타데이터를 ID로 매핑
     metadata_map = {book["id"]: book for book in books_metadata}
 
+    # 기존 times.json 로드 (있으면)
     all_times = defaultdict(list)
+    if os.path.exists(output_file):
+        try:
+            with open(output_file, 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
+                for time_key, quotes in existing_data.items():
+                    all_times[time_key] = quotes
+            print(f"✓ Loaded existing data: {len(existing_data)} time slots")
+        except Exception as e:
+            print(f"⚠ Could not load existing data: {e}")
+
     processed_count = 0
+    skipped_count = 0
+    newly_extracted = []
 
     # 모든 텍스트 파일 처리
     for filename in os.listdir(books_dir):
@@ -298,6 +340,11 @@ def process_books(books_dir="books", metadata_file="books_metadata.json"):
         metadata = metadata_map.get(book_id)
         if not metadata:
             print(f"⚠ No metadata for book ID {book_id}, skipping...")
+            continue
+
+        # 이미 추출된 책은 스킵
+        if metadata.get("extracted", False):
+            skipped_count += 1
             continue
 
         title = metadata["title"]
@@ -324,12 +371,24 @@ def process_books(books_dir="books", metadata_file="books_metadata.json"):
                 all_times[time_key].extend(quotes)
 
             print(f"  ✓ Found {sum(len(q) for q in time_results.values())} time references")
+
+            # 메타데이터 업데이트 (추출 완료 표시)
+            metadata["extracted"] = True
+            newly_extracted.append(book_id)
             processed_count += 1
 
         except Exception as e:
             print(f"  ✗ Error processing {filename}: {str(e)}")
 
-    return all_times, processed_count
+    # 메타데이터 저장 (extracted 상태 업데이트)
+    if newly_extracted:
+        with open(metadata_file, 'w', encoding='utf-8') as f:
+            json.dump(books_metadata, f, indent=2, ensure_ascii=False)
+        print(f"\n✓ Updated metadata for {len(newly_extracted)} newly extracted books")
+
+    print(f"\n📊 Summary: Processed {processed_count} books, Skipped {skipped_count} already extracted")
+
+    return all_times, processed_count, skipped_count
 
 def main():
     """메인 함수"""
@@ -339,7 +398,7 @@ def main():
     print()
 
     # 책 처리
-    all_times, processed_count = process_books()
+    all_times, processed_count, skipped_count = process_books()
 
     # 결과 저장
     output_file = "../public/times.json"
@@ -354,8 +413,9 @@ def main():
     print()
     print("=" * 60)
     print(f"처리 완료:")
-    print(f"  - 처리한 책: {processed_count}개")
-    print(f"  - 추출한 시간: {len(output_data)}개")
+    print(f"  - 새로 처리한 책: {processed_count}개")
+    print(f"  - 이미 추출된 책 (스킵): {skipped_count}개")
+    print(f"  - 총 시간대: {len(output_data)}개")
     print(f"  - 총 문장 수: {sum(len(quotes) for quotes in output_data.values())}개")
     print(f"  - 저장 위치: {output_file}")
     print("=" * 60)

@@ -1,0 +1,7 @@
+# 배포에서 제외할 파일들
+data-collection/books/
+data-collection/__pycache__/
+*.py
+*.txt
+data-collection/covered_times.txt
+data-collection/missing_times.txt

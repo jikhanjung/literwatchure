@@ -45,5 +45,39 @@ def main():
         print(f'  - 최소 문장 수: {min(quotes_counts)}개')
         print(f'  - 중간값: {sorted(quotes_counts)[len(quotes_counts)//2]}개')
 
+    # 모든 시간대 생성 (00:00 ~ 23:59)
+    all_times = []
+    for hour in range(24):
+        for minute in range(60):
+            all_times.append(f'{hour:02d}:{minute:02d}')
+
+    # 커버된 시간대와 안 된 시간대 분류
+    covered_times = sorted(data.keys())
+    missing_times = sorted([t for t in all_times if t not in data])
+
+    # 커버된 시간대 목록 저장
+    with open('covered_times.txt', 'w', encoding='utf-8') as f:
+        f.write(f'커버된 시간대 ({len(covered_times)}/1440)\n')
+        f.write('=' * 50 + '\n\n')
+        for i, time in enumerate(covered_times, 1):
+            quote_count = len(data[time])
+            f.write(f'{time}  ({quote_count}개 문장)\n')
+            if i % 60 == 0:  # 매 60개마다 구분선
+                f.write('\n')
+
+    # 커버 안 된 시간대 목록 저장
+    with open('missing_times.txt', 'w', encoding='utf-8') as f:
+        f.write(f'커버 안 된 시간대 ({len(missing_times)}/1440)\n')
+        f.write('=' * 50 + '\n\n')
+        for i, time in enumerate(missing_times, 1):
+            f.write(f'{time}\n')
+            if i % 60 == 0:  # 매 60개마다 구분선
+                f.write('\n')
+
+    print()
+    print('📝 시간대 목록 파일 생성:')
+    print(f'  - covered_times.txt ({len(covered_times)}개 시간대)')
+    print(f'  - missing_times.txt ({len(missing_times)}개 시간대)')
+
 if __name__ == "__main__":
     main()

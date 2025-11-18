@@ -1,143 +1,675 @@
 [
   {
-    "id": 1342,
-    "title": "Pride and Prejudice",
-    "author": "Jane Austen"
+    "id": 1,
+    "title": "The Declaration of Independence of the United States of America",
+    "author": "Jefferson, Thomas",
+    "extracted": true
   },
   {
-    "id": 84,
-    "title": "Frankenstein",
-    "author": "Mary Shelley"
+    "id": 2,
+    "title": "The United States Bill of Rights: The Ten Original Amendments to the Constitution of the United States",
+    "author": "United States",
+    "extracted": true
   },
   {
-    "id": 1661,
-    "title": "The Adventures of Sherlock Holmes",
-    "author": "Arthur Conan Doyle"
+    "id": 3,
+    "title": "John F. Kennedy's Inaugural Address",
+    "author": "Kennedy, John F. (John Fitzgerald)",
+    "extracted": true
+  },
+  {
+    "id": 4,
+    "title": "Lincoln's Gettysburg Address: Given November 19, 1863 on the battlefield near Gettysburg, Pennsylvania, USA",
+    "author": "Lincoln, Abraham",
+    "extracted": true
+  },
+  {
+    "id": 5,
+    "title": "The United States Constitution",
+    "author": "United States",
+    "extracted": true
+  },
+  {
+    "id": 6,
+    "title": "Give Me Liberty or Give Me Death",
+    "author": "Henry, Patrick",
+    "extracted": true
+  },
+  {
+    "id": 7,
+    "title": "The Mayflower Compact",
+    "author": "Unknown",
+    "extracted": true
+  },
+  {
+    "id": 8,
+    "title": "Abraham Lincoln's Second Inaugural Address",
+    "author": "Lincoln, Abraham",
+    "extracted": true
+  },
+  {
+    "id": 10,
+    "title": "The King James Version of the Bible",
+    "author": "Unknown",
+    "extracted": true
   },
   {
     "id": 11,
     "title": "Alice's Adventures in Wonderland",
-    "author": "Lewis Carroll"
+    "author": "Lewis Carroll",
+    "extracted": true
   },
   {
-    "id": 158,
-    "title": "Emma",
-    "author": "Jane Austen"
+    "id": 12,
+    "title": "Through the Looking-Glass",
+    "author": "Lewis Carroll",
+    "extracted": true
   },
   {
-    "id": 1952,
-    "title": "The Yellow Wallpaper",
-    "author": "Charlotte Perkins Gilman"
+    "id": 13,
+    "title": "The Hunting of the Snark: An Agony in Eight Fits",
+    "author": "Carroll, Lewis",
+    "extracted": true
   },
   {
-    "id": 174,
-    "title": "The Picture of Dorian Gray",
-    "author": "Oscar Wilde"
+    "id": 14,
+    "title": "The 1990 CIA World Factbook",
+    "author": "United States. Central Intelligence Agency",
+    "extracted": true
   },
   {
-    "id": 345,
-    "title": "Dracula",
-    "author": "Bram Stoker"
-  },
-  {
-    "id": 1260,
-    "title": "Jane Eyre",
-    "author": "Charlotte Brontë"
-  },
-  {
-    "id": 768,
-    "title": "Wuthering Heights",
-    "author": "Emily Brontë"
-  },
-  {
-    "id": 2701,
-    "title": "Moby Dick",
-    "author": "Herman Melville"
-  },
-  {
-    "id": 1400,
-    "title": "Great Expectations",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 98,
-    "title": "A Tale of Two Cities",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 46,
-    "title": "A Christmas Carol",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 1232,
-    "title": "The Prince",
-    "author": "Niccolò Machiavelli"
+    "id": 15,
+    "title": "Moby-Dick; or, The Whale",
+    "author": "Melville, Herman",
+    "extracted": true
   },
   {
     "id": 16,
     "title": "Peter Pan",
-    "author": "J. M. Barrie"
+    "author": "J. M. Barrie",
+    "extracted": true
   },
   {
-    "id": 844,
-    "title": "The Importance of Being Earnest",
-    "author": "Oscar Wilde"
+    "id": 17,
+    "title": "The Book of Mormon : $b an account written by the hand of Mormon, upon plates taken from the plates of Nephi",
+    "author": "Smith, Joseph, Jr.",
+    "extracted": true
   },
   {
-    "id": 1184,
-    "title": "The Count of Monte Cristo",
-    "author": "Alexandre Dumas"
+    "id": 19,
+    "title": "The Song of Hiawatha",
+    "author": "Longfellow, Henry Wadsworth",
+    "extracted": true
   },
   {
-    "id": 2600,
-    "title": "War and Peace",
-    "author": "Leo Tolstoy"
+    "id": 20,
+    "title": "Paradise Lost",
+    "author": "Milton, John",
+    "extracted": true
   },
   {
-    "id": 1080,
-    "title": "A Modest Proposal",
-    "author": "Jonathan Swift"
+    "id": 21,
+    "title": "Three hundred Aesop’s fables: Translated by George Fyler Townsend",
+    "author": "Aesop",
+    "extracted": true
   },
   {
-    "id": 145,
-    "title": "Middlemarch",
-    "author": "George Eliot"
+    "id": 22,
+    "title": "Roget's Thesaurus",
+    "author": "Roget, Peter Mark",
+    "extracted": true
   },
   {
-    "id": 1322,
-    "title": "Leaves of Grass",
-    "author": "Walt Whitman"
+    "id": 23,
+    "title": "Narrative of the Life of Frederick Douglass, an American Slave",
+    "author": "Douglass, Frederick",
+    "extracted": true
+  },
+  {
+    "id": 24,
+    "title": "O Pioneers!",
+    "author": "Cather, Willa",
+    "extracted": true
+  },
+  {
+    "id": 25,
+    "title": "The 1991 CIA World Factbook",
+    "author": "United States. Central Intelligence Agency",
+    "extracted": true
+  },
+  {
+    "id": 26,
+    "title": "Paradise Lost",
+    "author": "John Milton",
+    "extracted": true
+  },
+  {
+    "id": 27,
+    "title": "Far from the Madding Crowd",
+    "author": "Thomas Hardy",
+    "extracted": true
+  },
+  {
+    "id": 28,
+    "title": "The Fables of Aesop",
+    "author": "Aesop",
+    "extracted": true
+  },
+  {
+    "id": 29,
+    "title": "Census of Population and Housing, 1990",
+    "author": "United States Bureau of the Census",
+    "extracted": true
+  },
+  {
+    "id": 30,
+    "title": "The Bible, King James Version, Complete",
+    "author": "Unknown",
+    "extracted": true
+  },
+  {
+    "id": 31,
+    "title": "The Hand of Ethelberta",
+    "author": "Thomas Hardy",
+    "extracted": true
+  },
+  {
+    "id": 32,
+    "title": "Herland",
+    "author": "Gilman, Charlotte Perkins",
+    "extracted": true
+  },
+  {
+    "id": 33,
+    "title": "The Scarlet Letter",
+    "author": "Nathaniel Hawthorne",
+    "extracted": true
+  },
+  {
+    "id": 34,
+    "title": "Zen and the Art of the Internet",
+    "author": "Brendan P. Kehoe",
+    "extracted": true
+  },
+  {
+    "id": 35,
+    "title": "The Time Machine",
+    "author": "H.G. Wells",
+    "extracted": true
+  },
+  {
+    "id": 36,
+    "title": "The War of the Worlds",
+    "author": "H.G. Wells",
+    "extracted": true
+  },
+  {
+    "id": 37,
+    "title": "Census of Population and Housing, 1990 [2nd]",
+    "author": "United States Bureau of the Census",
+    "extracted": true
+  },
+  {
+    "id": 38,
+    "title": "The Jargon File, Version 2.9.10, 01 Jul 1992",
+    "author": "Various",
+    "extracted": true
+  },
+  {
+    "id": 41,
+    "title": "The Legend of Sleepy Hollow",
+    "author": "Irving, Washington",
+    "extracted": true
+  },
+  {
+    "id": 42,
+    "title": "Treasure Island",
+    "author": "Robert Louis Stevenson",
+    "extracted": true
+  },
+  {
+    "id": 43,
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+    "author": "Robert Louis Stevenson",
+    "extracted": true
+  },
+  {
+    "id": 44,
+    "title": "The Song of the Lark",
+    "author": "Willa Cather",
+    "extracted": true
+  },
+  {
+    "id": 45,
+    "title": "Anne of Green Gables",
+    "author": "L.M. Montgomery",
+    "extracted": true
+  },
+  {
+    "id": 46,
+    "title": "A Christmas Carol",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 47,
+    "title": "Anne of Avonlea",
+    "author": "Montgomery, L. M. (Lucy Maud)",
+    "extracted": true
+  },
+  {
+    "id": 48,
+    "title": "The 1992 CIA World Factbook",
+    "author": "United States. Central Intelligence Agency",
+    "extracted": true
+  },
+  {
+    "id": 49,
+    "title": "Surfing the Internet",
+    "author": "Jean Armour Polly",
+    "extracted": true
+  },
+  {
+    "id": 50,
+    "title": "Pi to 1,000,000 places",
+    "author": "Scott Hemphill",
+    "extracted": true
+  },
+  {
+    "id": 51,
+    "title": "Anne of the Island",
+    "author": "Montgomery, L. M. (Lucy Maud)",
+    "extracted": true
+  },
+  {
+    "id": 52,
+    "title": "The Square Root of 2",
+    "author": "Stan Kerr",
+    "extracted": true
+  },
+  {
+    "id": 53,
+    "title": "LOC Workshop on Electronic Texts",
+    "author": "Library of Congress",
+    "extracted": true
+  },
+  {
+    "id": 54,
+    "title": "The Marvellous Land of Oz",
+    "author": "L. Frank Baum",
+    "extracted": true
   },
   {
     "id": 55,
     "title": "The Wonderful Wizard of Oz",
-    "author": "L. Frank Baum"
+    "author": "L. Frank Baum",
+    "extracted": true
   },
   {
-    "id": 1399,
-    "title": "Anna Karenina",
-    "author": "Leo Tolstoy"
+    "id": 56,
+    "title": "NREN for All: Insurmountable Opportunity",
+    "author": "Jean Armour Polly",
+    "extracted": true
   },
   {
-    "id": 4300,
-    "title": "Ulysses",
-    "author": "James Joyce"
+    "id": 58,
+    "title": "Paradise Regained",
+    "author": "John Milton",
+    "extracted": true
   },
   {
-    "id": 161,
-    "title": "Sense and Sensibility",
-    "author": "Jane Austen"
+    "id": 59,
+    "title": "Discourse on Method",
+    "author": "René Descartes",
+    "extracted": true
+  },
+  {
+    "id": 61,
+    "title": "The Communist Manifesto",
+    "author": "Karl Marx",
+    "extracted": true
+  },
+  {
+    "id": 62,
+    "title": "A Princess of Mars",
+    "author": "Burroughs, Edgar Rice",
+    "extracted": true
+  },
+  {
+    "id": 63,
+    "title": "The Number \"e\"",
+    "author": "Unknown",
+    "extracted": true
+  },
+  {
+    "id": 64,
+    "title": "The Gods of Mars",
+    "author": "Edgar Rice Burroughs",
+    "extracted": true
+  },
+  {
+    "id": 65,
+    "title": "The First 100,000 Prime Numbers",
+    "author": "Unknown",
+    "extracted": true
+  },
+  {
+    "id": 66,
+    "title": "The Dawn of Amateur Radio in the U.K. and Greece",
+    "author": "Norman F. Joly",
+    "extracted": true
+  },
+  {
+    "id": 67,
+    "title": "The Black Experience in America",
+    "author": "Norman Coombs",
+    "extracted": true
+  },
+  {
+    "id": 68,
+    "title": "The Warlord of Mars",
+    "author": "Edgar Rice Burroughs",
+    "extracted": true
+  },
+  {
+    "id": 69,
+    "title": "The 32nd Mersenne Prime",
+    "author": "David Slowinski",
+    "extracted": true
+  },
+  {
+    "id": 70,
+    "title": "What Is Man? And Other Stories",
+    "author": "Mark Twain (Samuel Clemens)",
+    "extracted": true
+  },
+  {
+    "id": 71,
+    "title": "On the Duty of Civil Disobedience",
+    "author": "Henry David Thoreau",
+    "extracted": true
+  },
+  {
+    "id": 72,
+    "title": "Thuvia, Maid of Mars",
+    "author": "Edgar Rice Burroughs",
+    "extracted": true
+  },
+  {
+    "id": 73,
+    "title": "The Red Badge of Courage: An Episode of the American Civil War",
+    "author": "Crane, Stephen",
+    "extracted": true
+  },
+  {
+    "id": 74,
+    "title": "The Adventures of Tom Sawyer",
+    "author": "Mark Twain",
+    "extracted": true
+  },
+  {
+    "id": 75,
+    "title": "Email 101",
+    "author": "John Goodwin",
+    "extracted": true
+  },
+  {
+    "id": 76,
+    "title": "Adventures of Huckleberry Finn",
+    "author": "Mark Twain",
+    "extracted": true
+  },
+  {
+    "id": 77,
+    "title": "The Scarlet Letter",
+    "author": "Nathaniel Hawthorne",
+    "extracted": true
+  },
+  {
+    "id": 78,
+    "title": "Tarzan of the Apes",
+    "author": "Burroughs, Edgar Rice",
+    "extracted": true
+  },
+  {
+    "id": 79,
+    "title": "Terminal Compromise",
+    "author": "Winn Schwartau",
+    "extracted": true
+  },
+  {
+    "id": 80,
+    "title": "The Online World",
+    "author": "De Presno, Odd",
+    "extracted": true
+  },
+  {
+    "id": 81,
+    "title": "The Return of Tarzan",
+    "author": "Edgar Rice Burroughs",
+    "extracted": true
+  },
+  {
+    "id": 82,
+    "title": "Ivanhoe",
+    "author": "Walter Scott",
+    "extracted": true
+  },
+  {
+    "id": 83,
+    "title": "From the Earth to the Moon",
+    "author": "Jules Verne",
+    "extracted": true
+  },
+  {
+    "id": 84,
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "extracted": true
+  },
+  {
+    "id": 85,
+    "title": "The Beasts of Tarzan",
+    "author": "Edgar Rice Burroughs",
+    "extracted": true
+  },
+  {
+    "id": 86,
+    "title": "The Prince and the Pauper",
+    "author": "Mark Twain",
+    "extracted": true
+  },
+  {
+    "id": 87,
+    "title": "The 1993 CIA World Factbook",
+    "author": "United States. Central Intelligence Agency",
+    "extracted": true
+  },
+  {
+    "id": 88,
+    "title": "Price/Cost Indexes from 1875 to 1989",
+    "author": "United States",
+    "extracted": true
+  },
+  {
+    "id": 91,
+    "title": "Tom Sawyer Abroad",
+    "author": "Mark Twain (Samuel Clemens)",
+    "extracted": true
+  },
+  {
+    "id": 92,
+    "title": "Tarzan and the Jewels of Opar",
+    "author": "Edgar Rice Burroughs",
+    "extracted": true
+  },
+  {
+    "id": 93,
+    "title": "Tom Sawyer, Detective",
+    "author": "Mark Twain (Samuel Clemens)",
+    "extracted": true
+  },
+  {
+    "id": 94,
+    "title": "Alexander’s Bridge and The Barrel Organ",
+    "author": "Willa Cather and Alfred Noyes",
+    "extracted": true
+  },
+  {
+    "id": 95,
+    "title": "The Prisoner of Zenda",
+    "author": "Anthony Hope",
+    "extracted": true
+  },
+  {
+    "id": 96,
+    "title": "The Monster Men",
+    "author": "Edgar Rice Burroughs",
+    "extracted": true
+  },
+  {
+    "id": 97,
+    "title": "Flatland",
+    "author": "Edwin A. Abbott",
+    "extracted": true
+  },
+  {
+    "id": 98,
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 99,
+    "title": "Collected Articles of Frederick Douglass",
+    "author": "Frederick Douglass",
+    "extracted": true
+  },
+  {
+    "id": 100,
+    "title": "The Complete Works of William Shakespeare",
+    "author": "Shakespeare, William",
+    "extracted": true
+  },
+  {
+    "id": 101,
+    "title": "The Hacker Crackdown: Law and Disorder on the Electronic Frontier",
+    "author": "Sterling, Bruce",
+    "extracted": true
+  },
+  {
+    "id": 102,
+    "title": "The Tragedy of Pudd'nhead Wilson",
+    "author": "Twain, Mark",
+    "extracted": true
+  },
+  {
+    "id": 103,
+    "title": "Around the World in 80 Days",
+    "author": "Jules Verne",
+    "extracted": true
+  },
+  {
+    "id": 104,
+    "title": "Inaugural Address of Franklin Delano Roosevelt: Given in Washington, D.C. March 4th, 1933",
+    "author": "Roosevelt, Franklin D. (Franklin Delano)",
+    "extracted": true
   },
   {
     "id": 105,
     "title": "Persuasion",
-    "author": "Jane Austen"
+    "author": "Jane Austen",
+    "extracted": true
   },
   {
-    "id": 141,
-    "title": "Mansfield Park",
-    "author": "Jane Austen"
+    "id": 106,
+    "title": "Jungle Tales of Tarzan",
+    "author": "Burroughs, Edgar Rice",
+    "extracted": true
+  },
+  {
+    "id": 107,
+    "title": "Far from the Madding Crowd",
+    "author": "Thomas Hardy",
+    "extracted": true
+  },
+  {
+    "id": 108,
+    "title": "The Return of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "extracted": true
+  },
+  {
+    "id": 109,
+    "title": "Renascence, and Other Poems",
+    "author": "Millay, Edna St. Vincent",
+    "extracted": true
+  },
+  {
+    "id": 110,
+    "title": "Tess of the d'Urbervilles",
+    "author": "Thomas Hardy",
+    "extracted": true
+  },
+  {
+    "id": 111,
+    "title": "Freckles",
+    "author": "Stratton-Porter, Gene",
+    "extracted": true
+  },
+  {
+    "id": 112,
+    "title": "Violists",
+    "author": "McGowan, Richard",
+    "extracted": true
+  },
+  {
+    "id": 113,
+    "title": "The Secret Garden",
+    "author": "Frances Hodgson Burnett",
+    "extracted": true
+  },
+  {
+    "id": 114,
+    "title": "The Tenniel Illustrations for Carroll's Alice in Wonderland",
+    "author": "Tenniel, John",
+    "extracted": true
+  },
+  {
+    "id": 115,
+    "title": "United States Census Figures Back to 1630",
+    "author": "United States. Bureau of the Census",
+    "extracted": true
+  },
+  {
+    "id": 116,
+    "title": "Motion Pictures of the Apollo 11 Lunar Landing",
+    "author": "United States",
+    "extracted": true
+  },
+  {
+    "id": 117,
+    "title": "Symphony No. 5 in C minor Opus 67",
+    "author": "Beethoven, Ludwig van",
+    "extracted": true
+  },
+  {
+    "id": 118,
+    "title": "Big Dummy's Guide to the Internet",
+    "author": "Electronic Frontier Foundation",
+    "extracted": true
+  },
+  {
+    "id": 119,
+    "title": "A Connecticut Yankee in King Arthur's Court",
+    "author": "Mark Twain",
+    "extracted": true
+  },
+  {
+    "id": 120,
+    "title": "Kidnapped",
+    "author": "Robert Louis Stevenson",
+    "extracted": true
   },
   {
     "id": 121,
@@ -145,424 +677,874 @@
     "author": "Jane Austen"
   },
   {
-    "id": 730,
-    "title": "Oliver Twist",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 766,
-    "title": "David Copperfield",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 786,
-    "title": "The Pickwick Papers",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 580,
-    "title": "Hard Times",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 883,
-    "title": "Our Mutual Friend",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 967,
-    "title": "Little Dorrit",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 821,
-    "title": "Bleak House",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 564,
-    "title": "Dombey and Son",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 700,
-    "title": "The Old Curiosity Shop",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 917,
-    "title": "Nicholas Nickleby",
-    "author": "Charles Dickens"
-  },
-  {
-    "id": 2097,
-    "title": "The Sign of the Four",
-    "author": "Arthur Conan Doyle"
-  },
-  {
-    "id": 244,
-    "title": "A Study in Scarlet",
-    "author": "Arthur Conan Doyle"
-  },
-  {
-    "id": 3289,
-    "title": "The Hound of the Baskervilles",
-    "author": "Arthur Conan Doyle"
-  },
-  {
-    "id": 108,
-    "title": "The Return of Sherlock Holmes",
-    "author": "Arthur Conan Doyle"
-  },
-  {
-    "id": 2852,
-    "title": "The Memoirs of Sherlock Holmes",
-    "author": "Arthur Conan Doyle"
-  },
-  {
-    "id": 221,
-    "title": "The Valley of Fear",
-    "author": "Arthur Conan Doyle"
-  },
-  {
-    "id": 126,
-    "title": "The Lost World",
-    "author": "Arthur Conan Doyle"
-  },
-  {
-    "id": 76,
-    "title": "Adventures of Huckleberry Finn",
-    "author": "Mark Twain"
-  },
-  {
-    "id": 74,
-    "title": "The Adventures of Tom Sawyer",
-    "author": "Mark Twain"
-  },
-  {
-    "id": 119,
-    "title": "A Connecticut Yankee in King Arthur's Court",
-    "author": "Mark Twain"
-  },
-  {
-    "id": 86,
-    "title": "The Prince and the Pauper",
-    "author": "Mark Twain"
-  },
-  {
-    "id": 3176,
-    "title": "Life on the Mississippi",
-    "author": "Mark Twain"
-  },
-  {
-    "id": 245,
-    "title": "Roughing It",
-    "author": "Mark Twain"
-  },
-  {
-    "id": 1028,
-    "title": "The Tenant of Wildfell Hall",
-    "author": "Anne Brontë"
-  },
-  {
-    "id": 1653,
-    "title": "Agnes Grey",
-    "author": "Anne Brontë"
-  },
-  {
-    "id": 767,
-    "title": "Villette",
-    "author": "Charlotte Brontë"
-  },
-  {
-    "id": 9182,
-    "title": "Shirley",
-    "author": "Charlotte Brontë"
-  },
-  {
-    "id": 885,
-    "title": "The Soul of Man Under Socialism",
-    "author": "Oscar Wilde"
-  },
-  {
-    "id": 873,
-    "title": "An Ideal Husband",
-    "author": "Oscar Wilde"
-  },
-  {
-    "id": 790,
-    "title": "Lady Windermere's Fan",
-    "author": "Oscar Wilde"
-  },
-  {
-    "id": 902,
-    "title": "The Happy Prince and Other Tales",
-    "author": "Oscar Wilde"
-  },
-  {
-    "id": 507,
-    "title": "The Mill on the Floss",
-    "author": "George Eliot"
-  },
-  {
-    "id": 550,
-    "title": "Silas Marner",
-    "author": "George Eliot"
-  },
-  {
-    "id": 6688,
-    "title": "Daniel Deronda",
-    "author": "George Eliot"
-  },
-  {
-    "id": 2380,
-    "title": "Romola",
-    "author": "George Eliot"
-  },
-  {
-    "id": 110,
-    "title": "Tess of the d'Urbervilles",
-    "author": "Thomas Hardy"
-  },
-  {
-    "id": 153,
-    "title": "Jude the Obscure",
-    "author": "Thomas Hardy"
-  },
-  {
-    "id": 107,
-    "title": "Far from the Madding Crowd",
-    "author": "Thomas Hardy"
+    "id": 121,
+    "title": "The House of the Seven Gables",
+    "author": "Nathaniel Hawthorne",
+    "extracted": true
   },
   {
     "id": 122,
     "title": "The Return of the Native",
-    "author": "Thomas Hardy"
+    "author": "Thomas Hardy",
+    "extracted": true
+  },
+  {
+    "id": 123,
+    "title": "At the Earth's Core",
+    "author": "Burroughs, Edgar Rice",
+    "extracted": true
+  },
+  {
+    "id": 124,
+    "title": "Deuterocanonical Books of the Bible",
+    "author": "Anonymous",
+    "extracted": true
+  },
+  {
+    "id": 125,
+    "title": "A Girl of the Limberlost",
+    "author": "Stratton-Porter, Gene",
+    "extracted": true
+  },
+  {
+    "id": 126,
+    "title": "The Lost World",
+    "author": "Arthur Conan Doyle",
+    "extracted": true
+  },
+  {
+    "id": 127,
+    "title": "The number \"e\"",
+    "author": "Nemiroff, Robert J.",
+    "extracted": true
+  },
+  {
+    "id": 128,
+    "title": "The Arabian Nights Entertainments",
+    "author": "Lang, Andrew",
+    "extracted": true
+  },
+  {
+    "id": 129,
+    "title": "The square root of 2",
+    "author": "Nemiroff, Robert J.",
+    "extracted": true
+  },
+  {
+    "id": 130,
+    "title": "Orthodoxy",
+    "author": "Chesterton, G. K. (Gilbert Keith)",
+    "extracted": true
+  },
+  {
+    "id": 131,
+    "title": "The Pilgrim's Progress from this world to that which is to come: Delivered under the similitude of a dream, by John Bunyan",
+    "author": "Bunyan, John",
+    "extracted": true
+  },
+  {
+    "id": 132,
+    "title": "The Art of War",
+    "author": "Sunzi, active 6th century B.C.",
+    "extracted": true
+  },
+  {
+    "id": 133,
+    "title": "The Damnation of Theron Ware",
+    "author": "Frederic, Harold",
+    "extracted": true
+  },
+  {
+    "id": 134,
+    "title": "Maria; Or, The Wrongs of Woman",
+    "author": "Wollstonecraft, Mary",
+    "extracted": true
+  },
+  {
+    "id": 135,
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "extracted": true
+  },
+  {
+    "id": 136,
+    "title": "A Child's Garden of Verses",
+    "author": "Stevenson, Robert Louis",
+    "extracted": true
+  },
+  {
+    "id": 137,
+    "title": "Sara Crewe; Or, What Happened at Miss Minchin's Boarding School",
+    "author": "Burnett, Frances Hodgson",
+    "extracted": true
+  },
+  {
+    "id": 138,
+    "title": "George Sand: Some Aspects of Her Life and Writings",
+    "author": "Doumic, René",
+    "extracted": true
+  },
+  {
+    "id": 139,
+    "title": "The Lost World",
+    "author": "Doyle, Arthur Conan",
+    "extracted": true
+  },
+  {
+    "id": 140,
+    "title": "The Jungle",
+    "author": "Sinclair, Upton",
+    "extracted": true
+  },
+  {
+    "id": 141,
+    "title": "Mansfield Park",
+    "author": "Jane Austen",
+    "extracted": true
   },
   {
     "id": 142,
     "title": "The Mayor of Casterbridge",
-    "author": "Thomas Hardy"
+    "author": "Thomas Hardy",
+    "extracted": true
   },
   {
-    "id": 31,
-    "title": "The Hand of Ethelberta",
-    "author": "Thomas Hardy"
+    "id": 143,
+    "title": "The Mayor of Casterbridge",
+    "author": "Hardy, Thomas",
+    "extracted": true
   },
   {
-    "id": 35,
-    "title": "The Time Machine",
-    "author": "H.G. Wells"
+    "id": 144,
+    "title": "The Voyage Out",
+    "author": "Woolf, Virginia",
+    "extracted": true
   },
   {
-    "id": 36,
-    "title": "The War of the Worlds",
-    "author": "H.G. Wells"
+    "id": 145,
+    "title": "Middlemarch",
+    "author": "George Eliot",
+    "extracted": true
+  },
+  {
+    "id": 146,
+    "title": "A Little Princess",
+    "author": "Frances Hodgson Burnett",
+    "extracted": true
+  },
+  {
+    "id": 147,
+    "title": "Common Sense",
+    "author": "Paine, Thomas",
+    "extracted": true
+  },
+  {
+    "id": 148,
+    "title": "The Autobiography of Benjamin Franklin",
+    "author": "Franklin, Benjamin",
+    "extracted": true
+  },
+  {
+    "id": 150,
+    "title": "Plato's Republic",
+    "author": "Plato",
+    "extracted": true
+  },
+  {
+    "id": 151,
+    "title": "The Rime of the Ancient Mariner",
+    "author": "Samuel Taylor Coleridge",
+    "extracted": true
+  },
+  {
+    "id": 152,
+    "title": "Wild Justice",
+    "author": "Ruth M. Sprague",
+    "extracted": true
+  },
+  {
+    "id": 153,
+    "title": "Jude the Obscure",
+    "author": "Thomas Hardy",
+    "extracted": true
+  },
+  {
+    "id": 154,
+    "title": "The Rise of Silas Lapham",
+    "author": "William Dean Howells",
+    "extracted": true
+  },
+  {
+    "id": 155,
+    "title": "The Moonstone",
+    "author": "Wilkie Collins",
+    "extracted": true
+  },
+  {
+    "id": 156,
+    "title": "Beethoven's Fifth Symphony, in C-minor, Opus #67",
+    "author": "Ludwig van Beethoven",
+    "extracted": true
+  },
+  {
+    "id": 157,
+    "title": "Daddy-Long-Legs",
+    "author": "Jean Webster",
+    "extracted": true
+  },
+  {
+    "id": 158,
+    "title": "Emma",
+    "author": "Jane Austen",
+    "extracted": true
   },
   {
     "id": 159,
     "title": "The Island of Doctor Moreau",
-    "author": "H.G. Wells"
+    "author": "H.G. Wells",
+    "extracted": true
   },
   {
-    "id": 5230,
-    "title": "The Invisible Man",
-    "author": "H.G. Wells"
+    "id": 160,
+    "title": "The Awakening",
+    "author": "Kate Chopin",
+    "extracted": true
   },
   {
-    "id": 1743,
-    "title": "The First Men in the Moon",
-    "author": "H.G. Wells"
+    "id": 161,
+    "title": "Sense and Sensibility",
+    "author": "Jane Austen",
+    "extracted": true
   },
   {
-    "id": 103,
-    "title": "Around the World in 80 Days",
-    "author": "Jules Verne"
+    "id": 162,
+    "title": "Take Me for a Ride",
+    "author": "Mark E. Laxer",
+    "extracted": true
+  },
+  {
+    "id": 163,
+    "title": "Flower Fables",
+    "author": "Louisa May Alcott",
+    "extracted": true
   },
   {
     "id": 164,
     "title": "Twenty Thousand Leagues Under the Sea",
-    "author": "Jules Verne"
+    "author": "Jules Verne",
+    "extracted": true
   },
   {
-    "id": 18857,
-    "title": "Journey to the Center of the Earth",
-    "author": "Jules Verne"
+    "id": 165,
+    "title": "McTeague",
+    "author": "Frank Norris",
+    "extracted": true
   },
   {
-    "id": 1268,
-    "title": "The Mysterious Island",
-    "author": "Jules Verne"
+    "id": 166,
+    "title": "Ethan Frome",
+    "author": "Edith Wharton",
+    "extracted": true
   },
   {
-    "id": 83,
-    "title": "From the Earth to the Moon",
-    "author": "Jules Verne"
+    "id": 167,
+    "title": "American Handbook of the Daguerrotype",
+    "author": "Samuel D. Humphrey",
+    "extracted": true
   },
   {
-    "id": 1257,
-    "title": "The Three Musketeers",
-    "author": "Alexandre Dumas"
+    "id": 168,
+    "title": "The History and Practice of the Art of Photography",
+    "author": "Henry H. Snelling",
+    "extracted": true
   },
   {
-    "id": 2759,
-    "title": "Twenty Years After",
-    "author": "Alexandre Dumas"
+    "id": 169,
+    "title": "The Well at the World's End: A Tale",
+    "author": "Morris, William",
+    "extracted": true
   },
   {
-    "id": 1259,
-    "title": "The Man in the Iron Mask",
-    "author": "Alexandre Dumas"
+    "id": 170,
+    "title": "The Haunted Hotel: A Mystery of Modern Venice",
+    "author": "Collins, Wilkie",
+    "extracted": true
   },
   {
-    "id": 932,
-    "title": "The Raven",
-    "author": "Edgar Allan Poe"
+    "id": 171,
+    "title": "Charlotte Temple",
+    "author": "Susanna Rowson",
+    "extracted": true
   },
   {
-    "id": 2147,
-    "title": "The Works of Edgar Allan Poe",
-    "author": "Edgar Allan Poe"
+    "id": 172,
+    "title": "The Haunted Bookshop",
+    "author": "Christopher Morley",
+    "extracted": true
   },
   {
-    "id": 1063,
-    "title": "The Cask of Amontillado",
-    "author": "Edgar Allan Poe"
+    "id": 173,
+    "title": "The Insidious Dr. Fu Manchu",
+    "author": "Rohmer, Sax",
+    "extracted": true
   },
   {
-    "id": 77,
-    "title": "The Scarlet Letter",
-    "author": "Nathaniel Hawthorne"
+    "id": 174,
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "extracted": true
   },
   {
-    "id": 121,
-    "title": "The House of the Seven Gables",
-    "author": "Nathaniel Hawthorne"
-  },
-  {
-    "id": 15859,
-    "title": "Bartleby, the Scrivener",
-    "author": "Herman Melville"
-  },
-  {
-    "id": 10712,
-    "title": "Billy Budd",
-    "author": "Herman Melville"
-  },
-  {
-    "id": 514,
-    "title": "Little Women",
-    "author": "Louisa May Alcott"
-  },
-  {
-    "id": 37106,
-    "title": "Little Men",
-    "author": "Louisa May Alcott"
-  },
-  {
-    "id": 2788,
-    "title": "An Old-Fashioned Girl",
-    "author": "Louisa May Alcott"
-  },
-  {
-    "id": 42,
-    "title": "Treasure Island",
-    "author": "Robert Louis Stevenson"
-  },
-  {
-    "id": 43,
-    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
-    "author": "Robert Louis Stevenson"
-  },
-  {
-    "id": 120,
-    "title": "Kidnapped",
-    "author": "Robert Louis Stevenson"
-  },
-  {
-    "id": 12,
-    "title": "Through the Looking-Glass",
-    "author": "Lewis Carroll"
-  },
-  {
-    "id": 28885,
-    "title": "The Hunting of the Snark",
-    "author": "Lewis Carroll"
-  },
-  {
-    "id": 215,
-    "title": "The Call of the Wild",
-    "author": "Jack London"
-  },
-  {
-    "id": 910,
-    "title": "White Fang",
-    "author": "Jack London"
-  },
-  {
-    "id": 1055,
-    "title": "The Sea-Wolf",
-    "author": "Jack London"
-  },
-  {
-    "id": 1056,
-    "title": "Martin Eden",
-    "author": "Jack London"
-  },
-  {
-    "id": 219,
-    "title": "Heart of Darkness",
-    "author": "Joseph Conrad"
-  },
-  {
-    "id": 974,
-    "title": "Lord Jim",
-    "author": "Joseph Conrad"
-  },
-  {
-    "id": 520,
-    "title": "The Secret Agent",
-    "author": "Joseph Conrad"
-  },
-  {
-    "id": 2021,
-    "title": "Nostromo",
-    "author": "Joseph Conrad"
-  },
-  {
-    "id": 209,
-    "title": "The Turn of the Screw",
-    "author": "Henry James"
-  },
-  {
-    "id": 432,
-    "title": "The Portrait of a Lady",
-    "author": "Henry James"
+    "id": 175,
+    "title": "The Phantom of the Opera",
+    "author": "Leroux, Gaston",
+    "extracted": true
   },
   {
     "id": 176,
     "title": "Daisy Miller",
-    "author": "Henry James"
+    "author": "Henry James",
+    "extracted": true
   },
   {
-    "id": 2833,
-    "title": "The Ambassadors",
-    "author": "Henry James"
+    "id": 177,
+    "title": "The American",
+    "author": "Henry James",
+    "extracted": true
   },
   {
-    "id": 2641,
-    "title": "A Room with a View",
-    "author": "E.M. Forster"
+    "id": 178,
+    "title": "Confidence",
+    "author": "Henry James",
+    "extracted": true
   },
   {
-    "id": 2891,
-    "title": "Howards End",
-    "author": "E.M. Forster"
+    "id": 179,
+    "title": "The Europeans",
+    "author": "Henry James",
+    "extracted": true
   },
   {
-    "id": 5670,
-    "title": "Mrs Dalloway",
-    "author": "Virginia Woolf"
+    "id": 180,
+    "title": "The 1994 CIA World Factbook",
+    "author": "United States. Central Intelligence Agency",
+    "extracted": true
+  },
+  {
+    "id": 205,
+    "title": "Walden",
+    "author": "Henry David Thoreau",
+    "extracted": true
+  },
+  {
+    "id": 209,
+    "title": "The Turn of the Screw",
+    "author": "Henry James",
+    "extracted": true
+  },
+  {
+    "id": 215,
+    "title": "The Call of the Wild",
+    "author": "Jack London",
+    "extracted": true
+  },
+  {
+    "id": 217,
+    "title": "Sons and Lovers",
+    "author": "D.H. Lawrence",
+    "extracted": true
+  },
+  {
+    "id": 219,
+    "title": "Heart of Darkness",
+    "author": "Joseph Conrad",
+    "extracted": true
+  },
+  {
+    "id": 221,
+    "title": "The Valley of Fear",
+    "author": "Arthur Conan Doyle",
+    "extracted": true
+  },
+  {
+    "id": 236,
+    "title": "The Jungle Book",
+    "author": "Rudyard Kipling",
+    "extracted": true
+  },
+  {
+    "id": 244,
+    "title": "A Study in Scarlet",
+    "author": "Arthur Conan Doyle",
+    "extracted": true
+  },
+  {
+    "id": 245,
+    "title": "Roughing It",
+    "author": "Mark Twain",
+    "extracted": true
+  },
+  {
+    "id": 345,
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "extracted": true
+  },
+  {
+    "id": 370,
+    "title": "Moll Flanders",
+    "author": "Daniel Defoe",
+    "extracted": true
+  },
+  {
+    "id": 432,
+    "title": "The Portrait of a Lady",
+    "author": "Henry James",
+    "extracted": true
+  },
+  {
+    "id": 507,
+    "title": "The Mill on the Floss",
+    "author": "George Eliot",
+    "extracted": true
+  },
+  {
+    "id": 514,
+    "title": "Little Women",
+    "author": "Louisa May Alcott",
+    "extracted": true
+  },
+  {
+    "id": 520,
+    "title": "The Secret Agent",
+    "author": "Joseph Conrad",
+    "extracted": true
+  },
+  {
+    "id": 521,
+    "title": "Robinson Crusoe",
+    "author": "Daniel Defoe",
+    "extracted": true
+  },
+  {
+    "id": 541,
+    "title": "The Age of Innocence",
+    "author": "Edith Wharton",
+    "extracted": true
+  },
+  {
+    "id": 550,
+    "title": "Silas Marner",
+    "author": "George Eliot",
+    "extracted": true
+  },
+  {
+    "id": 564,
+    "title": "Dombey and Son",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 580,
+    "title": "Hard Times",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 583,
+    "title": "The Woman in White",
+    "author": "Wilkie Collins",
+    "extracted": true
+  },
+  {
+    "id": 600,
+    "title": "Notes from the Underground",
+    "author": "Fyodor Dostoevsky",
+    "extracted": true
+  },
+  {
+    "id": 700,
+    "title": "The Old Curiosity Shop",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 730,
+    "title": "Oliver Twist",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 766,
+    "title": "David Copperfield",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 767,
+    "title": "Villette",
+    "author": "Charlotte Brontë",
+    "extracted": true
+  },
+  {
+    "id": 768,
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "extracted": true
+  },
+  {
+    "id": 786,
+    "title": "The Pickwick Papers",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 790,
+    "title": "Lady Windermere's Fan",
+    "author": "Oscar Wilde",
+    "extracted": true
+  },
+  {
+    "id": 821,
+    "title": "Bleak House",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 829,
+    "title": "Gulliver's Travels",
+    "author": "Jonathan Swift",
+    "extracted": true
+  },
+  {
+    "id": 844,
+    "title": "The Importance of Being Earnest",
+    "author": "Oscar Wilde",
+    "extracted": true
+  },
+  {
+    "id": 873,
+    "title": "An Ideal Husband",
+    "author": "Oscar Wilde",
+    "extracted": true
+  },
+  {
+    "id": 883,
+    "title": "Our Mutual Friend",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 885,
+    "title": "The Soul of Man Under Socialism",
+    "author": "Oscar Wilde",
+    "extracted": true
+  },
+  {
+    "id": 902,
+    "title": "The Happy Prince and Other Tales",
+    "author": "Oscar Wilde",
+    "extracted": true
+  },
+  {
+    "id": 910,
+    "title": "White Fang",
+    "author": "Jack London",
+    "extracted": true
+  },
+  {
+    "id": 917,
+    "title": "Nicholas Nickleby",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 932,
+    "title": "The Raven",
+    "author": "Edgar Allan Poe",
+    "extracted": true
+  },
+  {
+    "id": 967,
+    "title": "Little Dorrit",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 974,
+    "title": "Lord Jim",
+    "author": "Joseph Conrad",
+    "extracted": true
+  },
+  {
+    "id": 996,
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "extracted": true
+  },
+  {
+    "id": 1004,
+    "title": "The Divine Comedy",
+    "author": "Dante Alighieri",
+    "extracted": true
+  },
+  {
+    "id": 1028,
+    "title": "The Tenant of Wildfell Hall",
+    "author": "Anne Brontë",
+    "extracted": true
+  },
+  {
+    "id": 1055,
+    "title": "The Sea-Wolf",
+    "author": "Jack London",
+    "extracted": true
+  },
+  {
+    "id": 1056,
+    "title": "Martin Eden",
+    "author": "Jack London",
+    "extracted": true
+  },
+  {
+    "id": 1063,
+    "title": "The Cask of Amontillado",
+    "author": "Edgar Allan Poe",
+    "extracted": true
+  },
+  {
+    "id": 1079,
+    "title": "The Life and Opinions of Tristram Shandy",
+    "author": "Laurence Sterne",
+    "extracted": true
+  },
+  {
+    "id": 1080,
+    "title": "A Modest Proposal",
+    "author": "Jonathan Swift",
+    "extracted": true
+  },
+  {
+    "id": 1081,
+    "title": "Dead Souls",
+    "author": "Nikolai Gogol",
+    "extracted": true
+  },
+  {
+    "id": 1184,
+    "title": "The Count of Monte Cristo",
+    "author": "Alexandre Dumas",
+    "extracted": true
+  },
+  {
+    "id": 1232,
+    "title": "The Prince",
+    "author": "Niccolò Machiavelli",
+    "extracted": true
+  },
+  {
+    "id": 1237,
+    "title": "Eugénie Grandet",
+    "author": "Honoré de Balzac",
+    "extracted": true
+  },
+  {
+    "id": 1257,
+    "title": "The Three Musketeers",
+    "author": "Alexandre Dumas",
+    "extracted": true
+  },
+  {
+    "id": 1259,
+    "title": "The Man in the Iron Mask",
+    "author": "Alexandre Dumas",
+    "extracted": true
+  },
+  {
+    "id": 1260,
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "extracted": true
+  },
+  {
+    "id": 1268,
+    "title": "The Mysterious Island",
+    "author": "Jules Verne",
+    "extracted": true
+  },
+  {
+    "id": 1322,
+    "title": "Leaves of Grass",
+    "author": "Walt Whitman",
+    "extracted": true
+  },
+  {
+    "id": 1342,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "extracted": true
+  },
+  {
+    "id": 1399,
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "extracted": true
+  },
+  {
+    "id": 1400,
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "extracted": true
+  },
+  {
+    "id": 1497,
+    "title": "The Republic",
+    "author": "Plato",
+    "extracted": true
+  },
+  {
+    "id": 1513,
+    "title": "Romeo and Juliet",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1514,
+    "title": "The Taming of the Shrew",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1524,
+    "title": "Hamlet",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1526,
+    "title": "Twelfth Night",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1531,
+    "title": "Julius Caesar",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1532,
+    "title": "King Lear",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1533,
+    "title": "Macbeth",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1534,
+    "title": "Othello",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1539,
+    "title": "The Tempest",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1653,
+    "title": "Agnes Grey",
+    "author": "Anne Brontë",
+    "extracted": true
+  },
+  {
+    "id": 1661,
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "extracted": true
+  },
+  {
+    "id": 1727,
+    "title": "The Odyssey",
+    "author": "Homer",
+    "extracted": true
+  },
+  {
+    "id": 1732,
+    "title": "The Cherry Orchard",
+    "author": "Anton Chekhov",
+    "extracted": true
+  },
+  {
+    "id": 1743,
+    "title": "The First Men in the Moon",
+    "author": "H.G. Wells",
+    "extracted": true
+  },
+  {
+    "id": 1780,
+    "title": "As You Like It",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1787,
+    "title": "A Midsummer Night's Dream",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1790,
+    "title": "The Merchant of Venice",
+    "author": "William Shakespeare",
+    "extracted": true
+  },
+  {
+    "id": 1952,
+    "title": "The Yellow Wallpaper",
+    "author": "Charlotte Perkins Gilman",
+    "extracted": true
+  },
+  {
+    "id": 1968,
+    "title": "Père Goriot",
+    "author": "Honoré de Balzac",
+    "extracted": true
+  },
+  {
+    "id": 1998,
+    "title": "Beyond Good and Evil",
+    "author": "Friedrich Nietzsche",
+    "extracted": true
+  },
+  {
+    "id": 2021,
+    "title": "Nostromo",
+    "author": "Joseph Conrad",
+    "extracted": true
+  },
+  {
+    "id": 2097,
+    "title": "The Sign of the Four",
+    "author": "Arthur Conan Doyle",
+    "extracted": true
+  },
+  {
+    "id": 2147,
+    "title": "The Works of Edgar Allan Poe",
+    "author": "Edgar Allan Poe",
+    "extracted": true
+  },
+  {
+    "id": 2153,
+    "title": "Cranford",
+    "author": "Elizabeth Gaskell",
+    "extracted": true
   },
   {
     "id": 2188,
@@ -570,79 +1552,153 @@
     "author": "Virginia Woolf"
   },
   {
-    "id": 4240,
-    "title": "Women in Love",
-    "author": "D.H. Lawrence"
-  },
-  {
-    "id": 217,
-    "title": "Sons and Lovers",
-    "author": "D.H. Lawrence"
-  },
-  {
-    "id": 64317,
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald"
-  },
-  {
-    "id": 2554,
-    "title": "Crime and Punishment",
-    "author": "Fyodor Dostoevsky"
-  },
-  {
-    "id": 28054,
-    "title": "The Brothers Karamazov",
-    "author": "Fyodor Dostoevsky"
-  },
-  {
-    "id": 600,
-    "title": "Notes from the Underground",
-    "author": "Fyodor Dostoevsky"
-  },
-  {
-    "id": 2638,
-    "title": "The Idiot",
-    "author": "Fyodor Dostoevsky"
-  },
-  {
-    "id": 1732,
-    "title": "The Cherry Orchard",
-    "author": "Anton Chekhov"
-  },
-  {
-    "id": 13415,
-    "title": "The Lady with the Dog",
-    "author": "Anton Chekhov"
-  },
-  {
-    "id": 1081,
-    "title": "Dead Souls",
-    "author": "Nikolai Gogol"
-  },
-  {
-    "id": 135,
-    "title": "Les Misérables",
-    "author": "Victor Hugo"
-  },
-  {
-    "id": 2610,
-    "title": "The Hunchback of Notre Dame",
-    "author": "Victor Hugo"
+    "id": 2380,
+    "title": "Romola",
+    "author": "George Eliot"
   },
   {
     "id": 2413,
     "title": "Madame Bovary",
-    "author": "Gustave Flaubert"
+    "author": "Gustave Flaubert",
+    "extracted": true
   },
   {
-    "id": 1968,
-    "title": "Père Goriot",
-    "author": "Honoré de Balzac"
+    "id": 2554,
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "extracted": true
   },
   {
-    "id": 1237,
-    "title": "Eugénie Grandet",
-    "author": "Honoré de Balzac"
+    "id": 2600,
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "extracted": true
+  },
+  {
+    "id": 2610,
+    "title": "The Hunchback of Notre Dame",
+    "author": "Victor Hugo",
+    "extracted": true
+  },
+  {
+    "id": 2638,
+    "title": "The Idiot",
+    "author": "Fyodor Dostoevsky",
+    "extracted": true
+  },
+  {
+    "id": 2641,
+    "title": "A Room with a View",
+    "author": "E.M. Forster",
+    "extracted": true
+  },
+  {
+    "id": 2701,
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "extracted": true
+  },
+  {
+    "id": 2759,
+    "title": "Twenty Years After",
+    "author": "Alexandre Dumas",
+    "extracted": true
+  },
+  {
+    "id": 2788,
+    "title": "An Old-Fashioned Girl",
+    "author": "Louisa May Alcott",
+    "extracted": true
+  },
+  {
+    "id": 2833,
+    "title": "The Ambassadors",
+    "author": "Henry James",
+    "extracted": true
+  },
+  {
+    "id": 2852,
+    "title": "The Memoirs of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "extracted": true
+  },
+  {
+    "id": 2891,
+    "title": "Howards End",
+    "author": "E.M. Forster",
+    "extracted": true
+  },
+  {
+    "id": 2944,
+    "title": "Essays",
+    "author": "Ralph Waldo Emerson",
+    "extracted": true
+  },
+  {
+    "id": 3176,
+    "title": "Life on the Mississippi",
+    "author": "Mark Twain",
+    "extracted": true
+  },
+  {
+    "id": 3188,
+    "title": "North and South",
+    "author": "Elizabeth Gaskell",
+    "extracted": true
+  },
+  {
+    "id": 3289,
+    "title": "The Hound of the Baskervilles",
+    "author": "Arthur Conan Doyle",
+    "extracted": true
+  },
+  {
+    "id": 3408,
+    "title": "The Way We Live Now",
+    "author": "Anthony Trollope",
+    "extracted": true
+  },
+  {
+    "id": 3420,
+    "title": "A Vindication of the Rights of Woman",
+    "author": "Mary Wollstonecraft",
+    "extracted": true
+  },
+  {
+    "id": 4240,
+    "title": "Women in Love",
+    "author": "D.H. Lawrence",
+    "extracted": true
+  },
+  {
+    "id": 4300,
+    "title": "Ulysses",
+    "author": "James Joyce",
+    "extracted": true
+  },
+  {
+    "id": 4363,
+    "title": "Thus Spake Zarathustra",
+    "author": "Friedrich Nietzsche",
+    "extracted": true
+  },
+  {
+    "id": 5230,
+    "title": "The Invisible Man",
+    "author": "H.G. Wells",
+    "extracted": true
+  },
+  {
+    "id": 5231,
+    "title": "Barchester Towers",
+    "author": "Anthony Trollope",
+    "extracted": true
+  },
+  {
+    "id": 5670,
+    "title": "Mrs Dalloway",
+    "author": "Virginia Woolf",
+    "extracted": true
   },
   {
     "id": 5711,
@@ -650,248 +1706,111 @@
     "author": "Émile Zola"
   },
   {
-    "id": 1004,
-    "title": "The Divine Comedy",
-    "author": "Dante Alighieri"
-  },
-  {
-    "id": 996,
-    "title": "Don Quixote",
-    "author": "Miguel de Cervantes"
-  },
-  {
-    "id": 1727,
-    "title": "The Odyssey",
-    "author": "Homer"
-  },
-  {
     "id": 6130,
     "title": "The Iliad",
-    "author": "Homer"
-  },
-  {
-    "id": 1524,
-    "title": "Hamlet",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1513,
-    "title": "Romeo and Juliet",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1533,
-    "title": "Macbeth",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1532,
-    "title": "King Lear",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1531,
-    "title": "Julius Caesar",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1787,
-    "title": "A Midsummer Night's Dream",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1790,
-    "title": "The Merchant of Venice",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1534,
-    "title": "Othello",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1539,
-    "title": "The Tempest",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1780,
-    "title": "As You Like It",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1514,
-    "title": "The Taming of the Shrew",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 1526,
-    "title": "Twelfth Night",
-    "author": "William Shakespeare"
-  },
-  {
-    "id": 26,
-    "title": "Paradise Lost",
-    "author": "John Milton"
-  },
-  {
-    "id": 829,
-    "title": "Gulliver's Travels",
-    "author": "Jonathan Swift"
-  },
-  {
-    "id": 521,
-    "title": "Robinson Crusoe",
-    "author": "Daniel Defoe"
-  },
-  {
-    "id": 370,
-    "title": "Moll Flanders",
-    "author": "Daniel Defoe"
+    "author": "Homer",
+    "extracted": true
   },
   {
     "id": 6593,
     "title": "Tom Jones",
-    "author": "Henry Fielding"
+    "author": "Henry Fielding",
+    "extracted": true
   },
   {
-    "id": 9296,
-    "title": "Pamela",
-    "author": "Samuel Richardson"
-  },
-  {
-    "id": 1079,
-    "title": "The Life and Opinions of Tristram Shandy",
-    "author": "Laurence Sterne"
-  },
-  {
-    "id": 583,
-    "title": "The Woman in White",
-    "author": "Wilkie Collins"
-  },
-  {
-    "id": 155,
-    "title": "The Moonstone",
-    "author": "Wilkie Collins"
-  },
-  {
-    "id": 5231,
-    "title": "Barchester Towers",
-    "author": "Anthony Trollope"
-  },
-  {
-    "id": 3408,
-    "title": "The Way We Live Now",
-    "author": "Anthony Trollope"
-  },
-  {
-    "id": 3188,
-    "title": "North and South",
-    "author": "Elizabeth Gaskell"
-  },
-  {
-    "id": 2153,
-    "title": "Cranford",
-    "author": "Elizabeth Gaskell"
-  },
-  {
-    "id": 541,
-    "title": "The Age of Innocence",
-    "author": "Edith Wharton"
-  },
-  {
-    "id": 166,
-    "title": "Ethan Frome",
-    "author": "Edith Wharton"
-  },
-  {
-    "id": 160,
-    "title": "The Awakening",
-    "author": "Kate Chopin"
-  },
-  {
-    "id": 45,
-    "title": "Anne of Green Gables",
-    "author": "L.M. Montgomery"
-  },
-  {
-    "id": 113,
-    "title": "The Secret Garden",
-    "author": "Frances Hodgson Burnett"
-  },
-  {
-    "id": 146,
-    "title": "A Little Princess",
-    "author": "Frances Hodgson Burnett"
-  },
-  {
-    "id": 236,
-    "title": "The Jungle Book",
-    "author": "Rudyard Kipling"
-  },
-  {
-    "id": 35997,
-    "title": "Kim",
-    "author": "Rudyard Kipling"
-  },
-  {
-    "id": 10150,
-    "title": "The Jewel of Seven Stars",
-    "author": "Bram Stoker"
-  },
-  {
-    "id": 3420,
-    "title": "A Vindication of the Rights of Woman",
-    "author": "Mary Wollstonecraft"
-  },
-  {
-    "id": 1497,
-    "title": "The Republic",
-    "author": "Plato"
+    "id": 6688,
+    "title": "Daniel Deronda",
+    "author": "George Eliot",
+    "extracted": true
   },
   {
     "id": 6762,
     "title": "Politics",
-    "author": "Aristotle"
-  },
-  {
-    "id": 59,
-    "title": "Discourse on Method",
-    "author": "René Descartes"
+    "author": "Aristotle",
+    "extracted": true
   },
   {
     "id": 7370,
     "title": "Second Treatise of Government",
-    "author": "John Locke"
+    "author": "John Locke",
+    "extracted": true
   },
   {
-    "id": 1998,
-    "title": "Beyond Good and Evil",
-    "author": "Friedrich Nietzsche"
+    "id": 9182,
+    "title": "Shirley",
+    "author": "Charlotte Brontë",
+    "extracted": true
   },
   {
-    "id": 4363,
-    "title": "Thus Spake Zarathustra",
-    "author": "Friedrich Nietzsche"
+    "id": 9296,
+    "title": "Pamela",
+    "author": "Samuel Richardson",
+    "extracted": true
   },
   {
-    "id": 61,
-    "title": "The Communist Manifesto",
-    "author": "Karl Marx"
+    "id": 10150,
+    "title": "The Jewel of Seven Stars",
+    "author": "Bram Stoker",
+    "extracted": true
   },
   {
-    "id": 205,
-    "title": "Walden",
-    "author": "Henry David Thoreau"
+    "id": 10712,
+    "title": "Billy Budd",
+    "author": "Herman Melville",
+    "extracted": true
   },
   {
-    "id": 2944,
-    "title": "Essays",
-    "author": "Ralph Waldo Emerson"
+    "id": 13415,
+    "title": "The Lady with the Dog",
+    "author": "Anton Chekhov",
+    "extracted": true
+  },
+  {
+    "id": 15859,
+    "title": "Bartleby, the Scrivener",
+    "author": "Herman Melville",
+    "extracted": true
+  },
+  {
+    "id": 18857,
+    "title": "Journey to the Center of the Earth",
+    "author": "Jules Verne",
+    "extracted": true
   },
   {
     "id": 20203,
     "title": "The Autobiography of Benjamin Franklin",
-    "author": "Benjamin Franklin"
+    "author": "Benjamin Franklin",
+    "extracted": true
+  },
+  {
+    "id": 28054,
+    "title": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "extracted": true
+  },
+  {
+    "id": 28885,
+    "title": "The Hunting of the Snark",
+    "author": "Lewis Carroll",
+    "extracted": true
+  },
+  {
+    "id": 35997,
+    "title": "Kim",
+    "author": "Rudyard Kipling",
+    "extracted": true
+  },
+  {
+    "id": 37106,
+    "title": "Little Men",
+    "author": "Louisa May Alcott",
+    "extracted": true
+  },
+  {
+    "id": 64317,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "extracted": true
   }
 ]
