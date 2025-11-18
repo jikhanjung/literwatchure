@@ -45,6 +45,11 @@
 - **실제 내용**: "The Online World" - 1993년 인터넷/BBS 가이드북 (기술 매뉴얼)
 - **제거된 인용구**: 41개
 
+### 8. Lucretia P. Hale의 The Peterkin Papers (ID: 118)
+- **증상**: "Mail version SMI 4.0 Mon Apr 24 18:34:15 PDT 1989" 같은 Unix 시스템 메시지
+- **실제 내용**: "Big Dummy's Guide To The Internet" - 1993-1994년 인터넷 가이드북 (EFF)
+- **제거된 인용구**: 10개
+
 ## 제거 작업 상세
 
 ### 작업 순서
@@ -75,6 +80,10 @@
    - Pellucidar (ID 80): 41개
    - books_metadata.json 업데이트 (989권 → 988권)
 
+6. **추가 기술 매뉴얼 제거** (커밋: 7ca389c)
+   - The Peterkin Papers (ID 118): 10개
+   - books_metadata.json 업데이트 (988권 → 987권)
+
 ### 기술적 구현
 
 Python 스크립트를 사용하여 다음 작업 수행:
@@ -99,9 +108,9 @@ times_data = {k: v for k, v in times_data.items() if v}
 |-----|--------|--------|------|
 | 커버리지 | 17.6% | 39.2% | +21.6%p (품질 개선) |
 | 커버된 시간대 | 253개 | 564개 | +311개 |
-| 총 인용구 수 | 6,382개 | 16,203개 | +9,821개 |
-| 제거된 부적절 텍스트 | - | 33,537개 | - |
-| 책 메타데이터 | 995권 | 988권 | -7권 |
+| 총 인용구 수 | 6,382개 | 16,193개 | +9,811개 |
+| 제거된 부적절 텍스트 | - | 33,547개 | - |
+| 책 메타데이터 | 995권 | 987권 | -8권 |
 
 ### 데이터 품질
 
@@ -141,6 +150,7 @@ times_data = {k: v for k, v in times_data.items() if v}
 ## 관련 커밋
 
 ```
+7ca389c Remove The Peterkin Papers (technical manual misclassified)
 e02bfbc Remove Pellucidar (technical manual misclassified as novel)
 660b392 Remove The Water of the Wondrous Isles (religious art book)
 2ae9414 Remove additional misclassified books (religious texts and wrong language)
@@ -151,9 +161,9 @@ fe09f41 Remove Moralia (misclassified King James Bible)
 
 ## 파일 변경 이력
 
-- `public/times.json`: 33,537개 인용구 제거
-- `data-collection/books_metadata.json`: 7개 책 제거 (995 → 988)
-- `data-collection/excluded_books.json`: 7개 항목 추가
+- `public/times.json`: 33,547개 인용구 제거
+- `data-collection/books_metadata.json`: 8개 책 제거 (995 → 987)
+- `data-collection/excluded_books.json`: 8개 항목 추가
 - `data-collection/covered_times.txt`: 통계 업데이트
 - `data-collection/missing_times.txt`: 통계 업데이트
 
