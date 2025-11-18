@@ -75,6 +75,11 @@
       "title": "The Water of the Wondrous Isles (ID 38500)",
       "reason": "religious_art_book",
       "note": "실제로는 'The Great Painters' Gospel' - 성화 캡션 설명서"
+    },
+    {
+      "title": "Pellucidar (ID 80)",
+      "reason": "technical_manual",
+      "note": "실제로는 'The Online World' - 1993년 인터넷/BBS 가이드북"
     }
   ],
   "patterns": [
