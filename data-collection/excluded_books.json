@@ -55,6 +55,21 @@
       "title": "Agrarian Justice",
       "reason": "religious_text",
       "note": "Douay-Rheims Bible로 잘못 분류됨 (chapter:verse 형식)"
+    },
+    {
+      "title": "The Time Machine (ID 17)",
+      "reason": "religious_text",
+      "note": "Book of Mormon으로 잘못 분류됨"
+    },
+    {
+      "title": "The Magic City (ID 124)",
+      "reason": "religious_text",
+      "note": "Deuterocanonical Books of the Bible (외경)로 잘못 분류됨"
+    },
+    {
+      "title": "The Time Machine (ID 56000)",
+      "reason": "wrong_language",
+      "note": "네덜란드어 동물 책으로 잘못 분류됨"
     }
   ],
   "patterns": [

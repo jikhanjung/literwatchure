@@ -2154,12 +2154,6 @@
     "extracted": true
   },
   {
-    "id": 56000,
-    "title": "The Time Machine",
-    "author": "H.G. Wells",
-    "extracted": true
-  },
-  {
     "id": 50,
     "title": "Bunyan's Pilgrim's Progress",
     "author": "John Bunyan",
@@ -3957,12 +3951,6 @@
     "author": "Lord Byron"
   },
   {
-    "id": 17,
-    "title": "The Time Machine",
-    "author": "H.G. Wells",
-    "extracted": true
-  },
-  {
     "id": 82500,
     "title": "Parisina",
     "author": "Lord Byron"
@@ -5521,12 +5509,6 @@
     "id": 1780,
     "title": "As You Like It",
     "author": "William Shakespeare",
-    "extracted": true
-  },
-  {
-    "id": 124,
-    "title": "The Magic City",
-    "author": "E. Nesbit",
     "extracted": true
   },
   {
