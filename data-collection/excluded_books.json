@@ -70,6 +70,11 @@
       "title": "The Time Machine (ID 56000)",
       "reason": "wrong_language",
       "note": "네덜란드어 동물 책으로 잘못 분류됨"
+    },
+    {
+      "title": "The Water of the Wondrous Isles (ID 38500)",
+      "reason": "religious_art_book",
+      "note": "실제로는 'The Great Painters' Gospel' - 성화 캡션 설명서"
     }
   ],
   "patterns": [
