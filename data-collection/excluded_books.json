@@ -1,0 +1,47 @@
+{
+  "description": "문학 시계에서 제외할 책 목록 - 종교 서적, 기술 문서, 참고서 등",
+  "excluded": [
+    {
+      "title": "The King James Version of the Bible",
+      "reason": "religious_text",
+      "note": "성경"
+    },
+    {
+      "title": "The Book of Mormon : $b an account written by the hand of Mormon, upon plates taken from the plates of Nephi",
+      "reason": "religious_text",
+      "note": "몰몬경"
+    },
+    {
+      "title": "The Bible, King James Version, Complete",
+      "reason": "religious_text",
+      "note": "성경"
+    },
+    {
+      "title": "Deuterocanonical Books of the Bible",
+      "reason": "religious_text",
+      "note": "외경"
+    },
+    {
+      "title": "Big Dummy's Guide to the Internet",
+      "reason": "technical_manual",
+      "note": "인터넷 가이드북"
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "bible",
+      "case_sensitive": false,
+      "reason": "religious_text"
+    },
+    {
+      "pattern": "testament",
+      "case_sensitive": false,
+      "reason": "religious_text"
+    },
+    {
+      "pattern": "mormon",
+      "case_sensitive": false,
+      "reason": "religious_text"
+    }
+  ]
+}

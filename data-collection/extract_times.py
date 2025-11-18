@@ -303,15 +303,43 @@ def extract_time_patterns(text, title, author):
 
     return results
 
-def process_books(books_dir="books", metadata_file="books_metadata.json", output_file="../public/times.json"):
+def load_excluded_books(excluded_file="excluded_books.json"):
+    """제외할 책 목록을 로드합니다."""
+    try:
+        with open(excluded_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            excluded_titles = {book['title'] for book in data.get('excluded', [])}
+            excluded_patterns = data.get('patterns', [])
+            return excluded_titles, excluded_patterns
+    except FileNotFoundError:
+        print(f"⚠ Excluded books file not found: {excluded_file}")
+        return set(), []
+
+def is_book_excluded(title, excluded_titles, excluded_patterns):
+    """책이 제외 목록에 있는지 확인합니다."""
+    # 정확한 제목 매칭
+    if title in excluded_titles:
+        return True
+
+    # 패턴 매칭
+    title_lower = title.lower()
+    for pattern_obj in excluded_patterns:
+        pattern = pattern_obj['pattern']
+        case_sensitive = pattern_obj.get('case_sensitive', False)
+
+        if case_sensitive:
+            if pattern in title:
+                return True
+        else:
+            if pattern in title_lower:
+                return True
+
+    return False
+
+def process_books(books_dir="books", metadata_file="books_metadata.json", output_file="../public/times.json", excluded_file="excluded_books.json"):
     """모든 책을 처리하고 시간 문장을 추출합니다."""
-    # 제외할 책 제목 목록 (정확한 매칭)
-    EXCLUDED_TITLES = {
-        'The King James Version of the Bible',
-        'The Book of Mormon : $b an account written by the hand of Mormon, upon plates taken from the plates of Nephi',
-        'The Bible, King James Version, Complete',
-        'Deuterocanonical Books of the Bible'
-    }
+    # 제외할 책 목록 로드
+    excluded_titles, excluded_patterns = load_excluded_books(excluded_file)
 
     # 메타데이터 로드
     with open(metadata_file, 'r', encoding='utf-8') as f:
@@ -359,8 +387,8 @@ def process_books(books_dir="books", metadata_file="books_metadata.json", output
         author = metadata["author"]
 
         # 제외할 책인지 확인
-        if title in EXCLUDED_TITLES:
-            print(f"Skipping excluded book: {title}")
+        if is_book_excluded(title, excluded_titles, excluded_patterns):
+            print(f"⊘ Skipping excluded book: {title}")
             skipped_count += 1
             continue
 

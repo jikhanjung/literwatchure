@@ -7,6 +7,7 @@ import os
 import requests
 from time import sleep
 import random
+import json
 
 # 프로젝트 구텐베르크의 인기 문학 작품 ID와 메타데이터
 BOOKS = [
@@ -1141,6 +1142,39 @@ BOOKS = [
     {"id": 99400, "title": "The Grace of Christ", "author": "Saint Augustine"},
 ]
 
+def load_excluded_books(excluded_file="excluded_books.json"):
+    """제외할 책 목록을 로드합니다."""
+    try:
+        with open(excluded_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            excluded_titles = {book['title'] for book in data.get('excluded', [])}
+            excluded_patterns = data.get('patterns', [])
+            return excluded_titles, excluded_patterns
+    except FileNotFoundError:
+        print(f"⚠ Excluded books file not found: {excluded_file}")
+        return set(), []
+
+def is_book_excluded(title, excluded_titles, excluded_patterns):
+    """책이 제외 목록에 있는지 확인합니다."""
+    # 정확한 제목 매칭
+    if title in excluded_titles:
+        return True
+
+    # 패턴 매칭
+    title_lower = title.lower()
+    for pattern_obj in excluded_patterns:
+        pattern = pattern_obj['pattern']
+        case_sensitive = pattern_obj.get('case_sensitive', False)
+
+        if case_sensitive:
+            if pattern in title:
+                return True
+        else:
+            if pattern in title_lower:
+                return True
+
+    return False
+
 def download_book(book_id, title, author, output_dir="books", max_retries=3):
     """프로젝트 구텐베르크에서 책을 다운로드합니다."""
     os.makedirs(output_dir, exist_ok=True)
@@ -1216,10 +1250,30 @@ def main():
     print("=" * 60)
     print()
 
-    success_count = 0
-    total_count = len(BOOKS)
+    # 제외할 책 목록 로드
+    excluded_titles, excluded_patterns = load_excluded_books()
+    print(f"✓ Loaded {len(excluded_titles)} excluded titles and {len(excluded_patterns)} patterns")
+    print()
+
+    # BOOKS 목록 필터링
+    filtered_books = []
+    excluded_count = 0
 
     for book in BOOKS:
+        if is_book_excluded(book["title"], excluded_titles, excluded_patterns):
+            print(f"⊘ Excluding: {book['title']}")
+            excluded_count += 1
+        else:
+            filtered_books.append(book)
+
+    print()
+    print(f"Total books: {len(BOOKS)}, Excluded: {excluded_count}, To download: {len(filtered_books)}")
+    print()
+
+    success_count = 0
+    total_count = len(filtered_books)
+
+    for book in filtered_books:
         filename = os.path.join("books", f"{book['id']}.txt")
         already_exists = os.path.exists(filename)
 
@@ -1237,11 +1291,10 @@ def main():
     print(f"다운로드 완료: {success_count}/{total_count} 작품")
     print("=" * 60)
 
-    # 메타데이터 저장
-    import json
+    # 메타데이터 저장 (필터링된 목록만)
     with open("books_metadata.json", "w", encoding="utf-8") as f:
-        json.dump(BOOKS, f, indent=2, ensure_ascii=False)
-    print("메타데이터 저장: books_metadata.json")
+        json.dump(filtered_books, f, indent=2, ensure_ascii=False)
+    print(f"메타데이터 저장: books_metadata.json ({len(filtered_books)} books)")
 
 if __name__ == "__main__":
     main()
