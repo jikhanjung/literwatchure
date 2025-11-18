@@ -25,6 +25,11 @@
       "title": "Big Dummy's Guide to the Internet",
       "reason": "technical_manual",
       "note": "인터넷 가이드북"
+    },
+    {
+      "title": "Zen and the Art of the Internet",
+      "reason": "technical_manual",
+      "note": "인터넷 가이드북"
     }
   ],
   "patterns": [
