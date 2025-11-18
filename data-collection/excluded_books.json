@@ -45,6 +45,11 @@
       "title": "LOC Workshop on Electronic Texts",
       "reason": "technical_manual",
       "note": "Library of Congress 워크샵 자료"
+    },
+    {
+      "title": "Moralia",
+      "reason": "religious_text",
+      "note": "킹제임스 성경으로 잘못 분류됨 (chapter:verse 형식)"
     }
   ],
   "patterns": [
