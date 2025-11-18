@@ -48,12 +48,6 @@
     "extracted": true
   },
   {
-    "id": 10,
-    "title": "The King James Version of the Bible",
-    "author": "Unknown",
-    "extracted": true
-  },
-  {
     "id": 11,
     "title": "Alice's Adventures in Wonderland",
     "author": "Lewis Carroll",
@@ -87,12 +81,6 @@
     "id": 16,
     "title": "Peter Pan",
     "author": "J. M. Barrie",
-    "extracted": true
-  },
-  {
-    "id": 17,
-    "title": "The Book of Mormon : $b an account written by the hand of Mormon, upon plates taken from the plates of Nephi",
-    "author": "Smith, Joseph, Jr.",
     "extracted": true
   },
   {
@@ -159,12 +147,6 @@
     "id": 29,
     "title": "Census of Population and Housing, 1990",
     "author": "United States Bureau of the Census",
-    "extracted": true
-  },
-  {
-    "id": 30,
-    "title": "The Bible, King James Version, Complete",
-    "author": "Unknown",
     "extracted": true
   },
   {
@@ -692,12 +674,6 @@
     "id": 123,
     "title": "At the Earth's Core",
     "author": "Burroughs, Edgar Rice",
-    "extracted": true
-  },
-  {
-    "id": 124,
-    "title": "Deuterocanonical Books of the Bible",
-    "author": "Anonymous",
     "extracted": true
   },
   {

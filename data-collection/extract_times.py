@@ -305,6 +305,14 @@ def extract_time_patterns(text, title, author):
 
 def process_books(books_dir="books", metadata_file="books_metadata.json", output_file="../public/times.json"):
     """모든 책을 처리하고 시간 문장을 추출합니다."""
+    # 제외할 책 제목 목록 (정확한 매칭)
+    EXCLUDED_TITLES = {
+        'The King James Version of the Bible',
+        'The Book of Mormon : $b an account written by the hand of Mormon, upon plates taken from the plates of Nephi',
+        'The Bible, King James Version, Complete',
+        'Deuterocanonical Books of the Bible'
+    }
+
     # 메타데이터 로드
     with open(metadata_file, 'r', encoding='utf-8') as f:
         books_metadata = json.load(f)
@@ -349,6 +357,12 @@ def process_books(books_dir="books", metadata_file="books_metadata.json", output
 
         title = metadata["title"]
         author = metadata["author"]
+
+        # 제외할 책인지 확인
+        if title in EXCLUDED_TITLES:
+            print(f"Skipping excluded book: {title}")
+            skipped_count += 1
+            continue
 
         print(f"Processing: {title} by {author}...")
 
