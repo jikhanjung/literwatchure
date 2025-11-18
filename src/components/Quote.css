@@ -1,0 +1,111 @@
+.quote {
+  position: relative;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.quote-mark {
+  font-size: 4rem;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 0;
+}
+
+.quote-mark.opening {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.quote-mark.closing {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-style: italic;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.quote-attribution {
+  margin-top: 2rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.quote-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  font-size: 1rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.no-quote .quote-text {
+  font-style: normal;
+  opacity: 0.6;
+  font-size: 1.2rem;
+}
+
+.quote-hint {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .quote {
+    padding: 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+  }
+
+  .quote-mark {
+    font-size: 3rem;
+  }
+
+  .quote-title {
+    font-size: 1rem;
+  }
+
+  .quote-author {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    padding: 1rem;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .quote-mark {
+    font-size: 2.5rem;
+  }
+}

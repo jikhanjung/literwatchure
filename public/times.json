@@ -1,0 +1,100 @@
+{
+  "00:00": [
+    {
+      "quote": "It was now midnight, and my task was drawing to a close.",
+      "title": "Frankenstein",
+      "author": "Mary Shelley"
+    }
+  ],
+  "09:00": [
+    {
+      "quote": "At nine o'clock in the morning we started for the scene of the tragedy.",
+      "title": "The Adventures of Sherlock Holmes",
+      "author": "Arthur Conan Doyle"
+    }
+  ],
+  "10:30": [
+    {
+      "quote": "At half-past ten the fly arrived, and we set off.",
+      "title": "Dracula",
+      "author": "Bram Stoker"
+    }
+  ],
+  "12:00": [
+    {
+      "quote": "It was already noon when I awoke, and I felt that I had no time to lose.",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen"
+    }
+  ],
+  "14:15": [
+    {
+      "quote": "At a quarter past two, I was awakened by a soft tap at the door.",
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë"
+    }
+  ],
+  "15:00": [
+    {
+      "quote": "The clock struck three o'clock, and I heard him walk to the door.",
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë"
+    }
+  ],
+  "16:00": [
+    {
+      "quote": "At four o'clock, therefore, we may expect this peace-maker to make his appearance.",
+      "title": "Emma",
+      "author": "Jane Austen"
+    }
+  ],
+  "17:30": [
+    {
+      "quote": "At half past five we were all assembled in the drawing-room.",
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde"
+    }
+  ],
+  "18:00": [
+    {
+      "quote": "It was six o'clock when they reached the lodge, and the sun was setting.",
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens"
+    }
+  ],
+  "19:00": [
+    {
+      "quote": "At seven o'clock the coffee was made and the pan was on the back of the stove hot and ready to cook the chops.",
+      "title": "Moby Dick",
+      "author": "Herman Melville"
+    }
+  ],
+  "20:00": [
+    {
+      "quote": "The clock struck eight, and still the old man did not appear.",
+      "title": "Great Expectations",
+      "author": "Charles Dickens"
+    }
+  ],
+  "21:00": [
+    {
+      "quote": "At nine o'clock that evening I found myself in the sitting-room at Baker Street.",
+      "title": "The Adventures of Sherlock Holmes",
+      "author": "Arthur Conan Doyle"
+    }
+  ],
+  "22:00": [
+    {
+      "quote": "It was ten o'clock at night before we found a suitable opportunity.",
+      "title": "Frankenstein",
+      "author": "Mary Shelley"
+    }
+  ],
+  "23:00": [
+    {
+      "quote": "At eleven o'clock this night the whole city will be asleep.",
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas"
+    }
+  ]
+}
